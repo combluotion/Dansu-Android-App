@@ -1,4 +1,4 @@
-package com.example.elamoreslomasgrande.volley1;
+package com.example.elamoreslomasgrande.volley1.Ofertas;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

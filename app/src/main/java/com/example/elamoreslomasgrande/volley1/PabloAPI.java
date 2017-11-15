@@ -1,12 +1,13 @@
 package com.example.elamoreslomasgrande.volley1;
 
+import com.example.elamoreslomasgrande.volley1.Ofertas.Oferta;
+
 import java.util.ArrayList;
 
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
 import okhttp3.ResponseBody;
 import retrofit2.Call;
-import retrofit2.http.Body;
 import retrofit2.http.Headers;
 import retrofit2.http.Multipart;
 import retrofit2.http.POST;
@@ -24,4 +25,6 @@ public interface PabloAPI {
     @Headers("Content-Type: application/json")
     @POST("oferta/cargar")
     Call<ArrayList<Oferta>> getOfertas();
+
+    //hello
 }

@@ -1,35 +1,17 @@
 package com.example.elamoreslomasgrande.volley1;
 
 
-import android.app.Activity;
-import android.app.ProgressDialog;
-import android.content.Context;
-import android.content.ContextWrapper;
-import android.content.res.Configuration;
-import android.graphics.Movie;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
-import android.view.Menu;
-import android.view.View;
-import android.widget.Toast;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
+import com.example.elamoreslomasgrande.volley1.Ofertas.Oferta;
+import com.example.elamoreslomasgrande.volley1.Ofertas.OfertasAdapter;
 
-import java.io.DataOutputStream;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.OutputStream;
-import java.net.HttpURLConnection;
-import java.net.URL;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 import retrofit2.Call;
