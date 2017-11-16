@@ -105,7 +105,7 @@ public class LoginPage extends AppCompatActivity implements GoogleApiClient.Conn
         super.onStart();
 
         OptionalPendingResult<GoogleSignInResult> opr = Auth.GoogleSignInApi.silentSignIn(googleApiClient);
-        Log.d("hello1", "hello");
+        Log.d("hello1", "dsfdsfdsfa");
         if(opr.isDone()){
             Log.d("hello2", "hello");
             GoogleSignInResult result = opr.get();
