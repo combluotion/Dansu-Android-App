@@ -23,6 +23,7 @@
         </activity>
         <activity android:name=".Main2Activity"></activity>
         <activity android:name=".crop"></activity>
+        <activity android:name=".Precarga.SplashArt"></activity>
     </application>
 
 </manifest>

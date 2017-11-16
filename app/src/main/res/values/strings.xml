@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">Volley1</string>
+
+    <string name="login_mail">Email</string>
+    <string name="login_psswd">Contraseña</string>
+    <string name="login_entrar">Entrar</string>
+    <string name="login_info">Inicia la sesión para apuntarte a castings</string>
+    <string name="login_olvidada">¿Has olvidado tu contraseña?</string>
+    <string name="login_registrarse">Registrarme</string>
+
+
+    <string name="title_activity_navigation_test">Retraso</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="option_home_setting">Settings</string>
+    <string name="title_activity_home_app">home_app</string>
+    <string name="title_activity_maps">Map</string>
+
 </resources>
