@@ -4,7 +4,6 @@ package com.example.elamoreslomasgrande.volley1.Precarga;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.Toast;
 
 import com.example.elamoreslomasgrande.volley1.Login.LoginPage;
 import com.example.elamoreslomasgrande.volley1.R;
