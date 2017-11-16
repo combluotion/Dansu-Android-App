@@ -26,7 +26,7 @@ public class SplashArt extends AppCompatActivity {
                 try {
                     super.run();
                     id_login = new Preferences(getApplicationContext()).getPreferenceDouble("id");
-                    sleep(1000);  //Delay of 10 seconds
+                    sleep(5000);  //Delay of 10 seconds
                 } catch (Exception e) {
 
                 } finally {

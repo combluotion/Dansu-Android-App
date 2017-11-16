@@ -1,0 +1,107 @@
+{
+  "project_info": {
+    "project_number": "545781173452",
+    "firebase_url": "https://myprojectalpha-dd395.firebaseio.com",
+    "project_id": "myprojectalpha-dd395",
+    "storage_bucket": "myprojectalpha-dd395.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:545781173452:android:1a1727dd7dd49a34",
+        "android_client_info": {
+          "package_name": "com.example.elamorhallegadoavues.slowapp1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "545781173452-drhi8rln7tekt0mhre9cjcmfkilk531s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.elamorhallegadoavues.slowapp1",
+            "certificate_hash": "e005b0a0822b458845fa76d4929de5aff7bb692a"
+          }
+        },
+        {
+          "client_id": "545781173452-ine4sna0dlcudm23hl1osfq07ap9vg7n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.elamorhallegadoavues.slowapp1",
+            "certificate_hash": "c92c40db8863300a7bb365758180f576b66b1d32"
+          }
+        },
+        {
+          "client_id": "545781173452-h0gsn1g07f6n5et1gjak001qo0ffjtqv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAH8dhV10B2niClosoe-qZLhjmG6LNoCgc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "545781173452-h0gsn1g07f6n5et1gjak001qo0ffjtqv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:545781173452:android:59d60acf6b9d1003",
+        "android_client_info": {
+          "package_name": "com.example.elamoreslomasgrande.volley1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "545781173452-ql55kjo18d2utebkjrg5vpkudqu7kbbs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.elamoreslomasgrande.volley1",
+            "certificate_hash": "c92c40db8863300a7bb365758180f576b66b1d32"
+          }
+        },
+        {
+          "client_id": "545781173452-h0gsn1g07f6n5et1gjak001qo0ffjtqv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAH8dhV10B2niClosoe-qZLhjmG6LNoCgc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "545781173452-h0gsn1g07f6n5et1gjak001qo0ffjtqv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
