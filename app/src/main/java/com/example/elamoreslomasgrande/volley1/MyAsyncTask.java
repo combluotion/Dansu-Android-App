@@ -28,7 +28,7 @@ import java.net.URL;
  * Created by elamoreslomasgrande on 16/11/2017.
  */
 
-class MyAsyncTask extends AsyncTask<String, Integer, String> {
+public class MyAsyncTask extends AsyncTask<String, Integer, String> {
     Activity activity;
     SharedPreferences sharedpreferences;
     //doInBackground es un método que se ejecuta en el background.

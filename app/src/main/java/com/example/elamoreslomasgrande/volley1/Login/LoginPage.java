@@ -10,8 +10,10 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.elamoreslomasgrande.volley1.MyAsyncTask;
 import com.example.elamoreslomasgrande.volley1.Precarga.Preferences;
 import com.example.elamoreslomasgrande.volley1.R;
+import com.example.elamoreslomasgrande.volley1.User.Usuario;
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
@@ -72,7 +74,7 @@ public class LoginPage extends AppCompatActivity implements GoogleApiClient.Conn
     public void Login(View view){
         EditText mail = (EditText) findViewById(R.id.Email);
         EditText password = (EditText) findViewById(R.id.Pass);
-        //#############validarLogin(mail,password);
+        validarLogin(mail,password);
         id_login = new Preferences(getApplicationContext()).getPreferenceDouble("id");
         if(id_login > 0){
 
@@ -88,7 +90,17 @@ public class LoginPage extends AppCompatActivity implements GoogleApiClient.Conn
     }
 
 
+    private void validarLogin(EditText mail,EditText password){
+        String peticion = host_register+"/users/login";
+        try{
 
+            new MyAsyncTask(this).execute(peticion,"correo",mail.getText().toString(),"password",password.getText().toString());
+
+
+        }catch (Exception e){
+
+        }
+    }
 
 
 
@@ -105,20 +117,25 @@ public class LoginPage extends AppCompatActivity implements GoogleApiClient.Conn
         super.onStart();
 
         OptionalPendingResult<GoogleSignInResult> opr = Auth.GoogleSignInApi.silentSignIn(googleApiClient);
-        Log.d("hello1", "hello");
+        Log.d("hello1", "hello555555555555");
         if(opr.isDone()){
             Log.d("hello2", "hello");
             GoogleSignInResult result = opr.get();
+            //ENVIAR A LA HOME
+
+
             //######## manejaResultado(result);
         }else {
             Log.d("hello3", "hello");
+
+            //SI NO ESTA LOGEADO EN GOOGLE AL INICIAR EL ACTIVITY
             opr.setResultCallback(new ResultCallback<GoogleSignInResult>() {
 
 
                 @Override
                 public void onResult(@NonNull GoogleSignInResult googleSignInResult) {
                     Log.d("hello4", "hello");
-                  //#######  manejaResultado(googleSignInResult);
+                  manejaResultado(googleSignInResult);
                 }
             });
         }
@@ -133,7 +150,7 @@ public class LoginPage extends AppCompatActivity implements GoogleApiClient.Conn
         super.onActivityResult(requestCode, resultCode, data);
         if(requestCode == SIGN_IN_CODE){
             GoogleSignInResult result = Auth.GoogleSignInApi.getSignInResultFromIntent(data);
-            //######## manejaResultado(result);
+            manejaResultado(result);
         }
     }
 
@@ -151,7 +168,7 @@ public class LoginPage extends AppCompatActivity implements GoogleApiClient.Conn
 
     }
 
-   /* private void manejaResultado( GoogleSignInResult result ){
+    private void manejaResultado( GoogleSignInResult result ){
 
         if(result.isSuccess()){
             GoogleSignInAccount account = result.getSignInAccount();
@@ -163,15 +180,15 @@ public class LoginPage extends AppCompatActivity implements GoogleApiClient.Conn
 
             Usuario user = new Usuario(id, nombre, correo);
 
-            Intent intent = new Intent(this, Datos_Usuario_Google.class);
-            intent.putExtra("usuario",  user);
+            //Intent intent = new Intent(this, Datos_Usuario_Google.class);
+            //intent.putExtra("usuario",  user);
 
-            startActivity(intent);
+            //startActivity(intent);
             // Toast.makeText(this, "Exito en el Login", Toast.LENGTH_SHORT).show();
             //Intent intento = new Intent(this, Navigation_test.class);
             //startActivity(intento);
         }else{
             //Toast.makeText(this, "Error en el Login",Toast.LENGTH_SHORT).show();
         }
-    }*/
+    }
 }
