@@ -49,7 +49,7 @@ public class Navigation extends FragmentActivity {
 
 
 
-        mTextMessage = (TextView) findViewById(R.id.message);
+
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
     }
