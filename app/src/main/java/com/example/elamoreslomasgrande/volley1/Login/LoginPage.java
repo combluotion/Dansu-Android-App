@@ -76,17 +76,6 @@ public class LoginPage extends AppCompatActivity implements GoogleApiClient.Conn
         EditText password = (EditText) findViewById(R.id.Pass);
         validarLogin(mail,password);
         id_login = new Preferences(getApplicationContext()).getPreferenceDouble("id");
-        if(id_login > 0){
-
-
-            Toast.makeText(this, String.valueOf(id_login),Toast.LENGTH_LONG).show();
-
-
-        }else if (id_login <= 0){
-
-            //Toast.makeText(this, "HELLO NO BABIES",Toast.LENGTH_LONG).show();
-        }
-        //Toast.makeText(this, txt,Toast.LENGTH_LONG).show();
     }
 
 
@@ -118,7 +107,6 @@ public class LoginPage extends AppCompatActivity implements GoogleApiClient.Conn
 
         OptionalPendingResult<GoogleSignInResult> opr = Auth.GoogleSignInApi.silentSignIn(googleApiClient);
 
-         Log.d("hello1", "hello555555555555");
 
         if(opr.isDone()){
             Log.d("hello2", "hello");
@@ -169,6 +157,16 @@ public class LoginPage extends AppCompatActivity implements GoogleApiClient.Conn
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
 
     }
+    //Registro del usuario
+    public void registrarse(View view){
+
+        Intent in = new Intent(this, RegisterPage.class);
+        startActivity(in);
+
+        //Log.d(email.getText().toString(),password.getText().toString());
+        //new MyAsyncTask().execute(host_register);
+    }
+
 
     private void manejaResultado( GoogleSignInResult result ){
 
