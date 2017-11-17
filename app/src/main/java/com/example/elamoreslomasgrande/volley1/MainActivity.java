@@ -65,10 +65,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     }*/
-        public void APP(View view){
-            Toast.makeText(getApplicationContext(),"Llego",Toast.LENGTH_SHORT);
-            startActivity(new Intent(view.getContext(), SplashArt.class));
-        }
+
         private void loadJSON(){
             RetrofitService retrofitService = RetrofitService.getInstance();
             PabloAPI api = retrofitService.getApiProxyServer();

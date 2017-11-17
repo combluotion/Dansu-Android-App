@@ -11,6 +11,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.elamoreslomasgrande.volley1.MyAsyncTask;
+import com.example.elamoreslomasgrande.volley1.Navigation.Navigation;
 import com.example.elamoreslomasgrande.volley1.Precarga.Preferences;
 import com.example.elamoreslomasgrande.volley1.R;
 import com.example.elamoreslomasgrande.volley1.User.Usuario;
@@ -185,8 +186,8 @@ public class LoginPage extends AppCompatActivity implements GoogleApiClient.Conn
 
             //startActivity(intent);
             // Toast.makeText(this, "Exito en el Login", Toast.LENGTH_SHORT).show();
-            //Intent intento = new Intent(this, Navigation_test.class);
-            //startActivity(intento);
+            Intent intento = new Intent(this, Navigation.class);
+            startActivity(intento);
         }else{
             //Toast.makeText(this, "Error en el Login",Toast.LENGTH_SHORT).show();
         }
