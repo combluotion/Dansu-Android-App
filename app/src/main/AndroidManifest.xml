@@ -51,8 +51,9 @@
 
         <activity
             android:name=".MapsActivity"
-            android:label="@string/title_activity_maps"></activity>
-        <activity android:name=".Login.Bifurcacion"></activity>
+            android:label="@string/title_activity_maps" />
+        <activity android:name=".Login.Bifurcacion" />
+        <activity android:name=".Login.LoginEmpresa"></activity>
     </application>
 
 </manifest>
