@@ -6,17 +6,19 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
+    android:paddingHorizontal="45dp"
     tools:context="com.example.elamoreslomasgrande.volley1.Login.LoginPage">
 
     <ImageView
-        android:layout_width="match_parent"
+        android:layout_width="111dp"
         android:layout_height="111dp"
-        android:layout_marginBottom="26dp"
-        android:src="@drawable/circle" />
+        android:src="@drawable/circle"
+        android:layout_marginTop="25dp"/>
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="253dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
         android:layout_marginBottom="43dp"
         android:fontFamily="sans-serif"
         android:gravity="center_horizontal"
@@ -34,6 +36,7 @@
         android:backgroundTint="#000000"
         android:hint="@string/login_mail"
         android:maxLines="1"
+        android:inputType="textEmailAddress"
         android:textColor="#000000"
         android:textColorHint="#000000" />
 
@@ -45,7 +48,7 @@
         android:backgroundTint="#000000"
         android:hint="@string/login_psswd"
         android:maxLines="1"
-        android:password="true"
+        android:inputType="textPassword"
         android:textColor="#000000"
         android:textColorHint="#000000" />
 
@@ -53,14 +56,14 @@
         android:id="@+id/login"
         android:layout_width="270dp"
         android:layout_height="36dp"
-        android:layout_marginBottom="70dp"
+        android:layout_marginBottom="8dp"
         android:text="@string/login_entrar"
         android:onClick="Login"/>
 
     <com.google.android.gms.common.SignInButton
         android:id="@+id/sign_in_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_width="270dp"
+        android:layout_height="36dp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -68,6 +71,7 @@
         android:layout_marginBottom="10dp"
         android:fontFamily="sans-serif"
         android:gravity="center_horizontal"
+        android:layout_marginTop="10dp"
         android:letterSpacing="0.03"
         android:text="@string/login_olvidada"
         android:textColor="#000000"

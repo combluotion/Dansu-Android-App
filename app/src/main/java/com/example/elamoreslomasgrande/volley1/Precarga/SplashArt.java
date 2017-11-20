@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 import com.example.elamoreslomasgrande.volley1.Login.LoginPage;
+import com.example.elamoreslomasgrande.volley1.MapsActivity;
 import com.example.elamoreslomasgrande.volley1.Navigation.Navigation;
 import com.example.elamoreslomasgrande.volley1.R;
 
@@ -32,11 +33,11 @@ public class SplashArt extends AppCompatActivity {
                 } finally {
                     Intent i = null;
                     if (id_login > 0){
-                      i = new Intent(SplashArt.this, Navigation.class);
+                      i = new Intent(SplashArt.this, MapsActivity.class);
                        // startActivity(i);
 
                     }else{
-                        i = new Intent(SplashArt.this,  LoginPage.class);
+                        i = new Intent(SplashArt.this,  MapsActivity.class);
 
                     }
                     if (i != null){

@@ -1,12 +1,6 @@
 <resources>
     <string name="app_name">Volley1</string>
 
-    <string name="login_mail">Email</string>
-    <string name="login_psswd">Contraseña</string>
-    <string name="login_entrar">Entrar</string>
-    <string name="login_info">Inicia la sesión para apuntarte a castings</string>
-    <string name="login_olvidada">¿Has olvidado tu contraseña?</string>
-    <string name="login_registrarse">Registrarme</string>
 
 
     <string name="title_activity_navigation_test">Retraso</string>
@@ -20,5 +14,159 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- CUENTA -->
+
+    <string name="cuentaTitulo">Cuenta</string>
+    <string name="cuentaNombreUsuario">Nombre de usuario</string>
+    <string name="cuentaNombreApellidos">Nombre y apellidos</string>
+    <string name="cuentaCambiar">Cambiar contraseña</string>
+    <string name="cuentaBaja">Darme de baja</string>
+
+    <string name="cuentaEmpresaNombre">Nombre de la empresa</string>
+    <string name="cuentaEmpresaRepresentante">Representante de la empresa</string>
+    <string name="cuentaEmpresaEmail">Email</string>
+    <string name="cuentaEmpresaTelefono">Teléfono/móvil de contacto</string>
+    <string name="cuentaEmpresaDireccion">Dirección</string>
+    <string name="cuentaEmpresaCiudad">Ciudad y código postal</string>
+    <string name="cuentaEmpresaBtnGuardar">Guardar</string>
+
+    <!-- CAMBIAR CONTRASEÑA -->
+
+    <string name="cambiarPassTitulo">Cambiar Contraseña</string>
+    <string name="cambiarPassContraActual1">Escribe tu contraseña actual</string>
+    <string name="cambiarPassContraActual2">La contraseña introducida es incorrecta</string>
+    <string name="cambiarPassContraNueva1">Escribe tu nueva contraseña</string>
+    <string name="cambiarPassContraNueva2">La contraseña debe contener mínimo 8 caracteres</string>
+    <string name="cambiarPassContraRepetir1">Repite la nueva contraseña</string>
+    <string name="cambiarPassContraRepetir2">La contraseña no coincide con la anterior</string>
+    <string name="cambiarPassCambiar">Cambiar</string>
+    <string name="cambiarPassContraOlvidada">¿Has olvidado tu contraseña?</string>
+    <string name="cambiarPassExito">¡Tu contraseña se ha cambiado con éxito!</string>
+
+    <!-- DARSE DE BAJA -->
+
+    <string name="bajaTitulo">Darse de baja</string>
+    <string name="bajaTitulo2">Baja en Dansu</string>
+    <string name="bajaCuerpo">Para confirmar tu baja en Dansu pulsa confirmar, una vez pulsado, sadrás de Dansu y tu cuenta será dada de baja. \n Dándote de baja no podrás recuperar tu cuenta. Si estás seguro/a y ya no quieres formar parte de Dansu pulsa confirmar.\n Gracias por este tiempo en Dansu. </string>
+    <string name="bajaExito">¡Tu baja se ha relizado con éxito!</string>
+    <string name="bajaDespedida">Fue muy bonito mientrás duró… \n ¡Te echaremos de menos!</string>
+
+    <!-- NOTIFICACIONES -->
+
+    <string name="notificacionesTitulo">Notificaciones</string>
+    <string name="notificaciones1">Notificaciones por el movil</string>
+    <string name="notificaciones2">Notificaciones por email</string>
+    <string name="notificacionesValoraciones">Valoraciones en mis publicaciones</string>
+    <string name="notificacionesComentarios">Comentarios en mis publicaciones</string>
+
+    <string name="notificacionesNombre">Juan de la Torre</string>
+    <string name="notificacionesTipo">Ha comentado tu publicación</string>
+
+    <!-- POLÍTICA DE PRIVACIDAD -->
+
+    <string name="privacidadTitulo">Política de privacidad</string>
+    <string name="privacidadTitulo2">POLÍTICA DE PRIVACIDAD</string>
+    <string name="privacidadCuerpo">
+        POLÍTICA DE PRIVACIDAD
+        \n \n \n \n
+        El presente Política de Privacidad establece los términos en que usa y protege la información que es proporcionada por sus usuarios al momento de utilizar su sitio web. Esta compañía está comprometida con la seguridad de los datos de sus usuarios. Cuando le pedimos llenar los campos de información personal con la cual usted pueda ser identificado, lo hacemos asegurando que sólo se empleará de acuerdo con los términos de este documento. Sin embargo esta Política de Privacidad puede cambiar con el tiempo o ser actualizada por lo que le recomendamos y enfatizamos revisar continuamente esta página para asegurarse que está de acuerdo con dichos cambios.
+        \n \n
+        Información que es recogida
+        \n \n
+        Nuestro sitio web podrá recoger información personal por ejemplo: Nombre,  información de contacto como  su dirección de correo electrónica e información demográfica. Así mismo cuando sea necesario podrá ser requerida información específica para procesar algún pedido o realizar una entrega o facturación.
+        \n \n
+        Uso de la información recogida
+        \n \n
+        Nuestro sitio web emplea la información con el fin de proporcionar el mejor servicio posible, particularmente para mantener un registro de usuarios, de pedidos en caso que aplique, y mejorar nuestros productos y servicios.  Es posible que sean enviados correos electrónicos periódicamente a través de nuestro sitio con ofertas especiales, nuevos productos y otra información publicitaria que consideremos relevante para usted o que pueda brindarle algún beneficio, estos correos electrónicos serán enviados a la dirección que usted proporcione y podrán ser cancelados en cualquier momento.
+
+         está altamente comprometido para cumplir con el compromiso de mantener su información segura. Usamos los sistemas más avanzados y los actualizamos constantemente para asegurarnos que no exista ningún acceso no autorizado.
+        \n \n
+        Cookies
+        \n \n
+        Una cookie se refiere a un fichero que es enviado con la finalidad de solicitar permiso para almacenarse en su ordenador, al aceptar dicho fichero se crea y la cookie sirve entonces para tener información respecto al tráfico web, y también facilita las futuras visitas a una web recurrente. Otra función que tienen las cookies es que con ellas las web pueden reconocerte individualmente y por tanto brindarte el mejor servicio personalizado de su web.
+        \n \n
+        Nuestro sitio web emplea las cookies para poder identificar las páginas que son visitadas y su frecuencia. Esta información es empleada únicamente para análisis estadístico y después la información se elimina de forma permanente. Usted puede eliminar las cookies en cualquier momento desde su ordenador. Sin embargo las cookies ayudan a proporcionar un mejor servicio de los sitios web, estás no dan acceso a información de su ordenador ni de usted, a menos de que usted así lo quiera y la proporcione directamente, fuente. Usted puede aceptar o negar el uso de cookies, sin embargo la mayoría de navegadores aceptan cookies automáticamente pues sirve para tener un mejor servicio web. También usted puede cambiar la configuración de su ordenador para declinar las cookies. Si se declinan es posible que no pueda utilizar algunos de nuestros servicios.
+        \n \n
+        Enlaces a Terceros
+        \n \n
+        Este sitio web pudiera contener en laces a otros sitios que pudieran ser de su interés. Una vez que usted de clic en estos enlaces y abandone nuestra página, ya no tenemos control sobre al sitio al que es redirigido y por lo tanto no somos responsables de los términos o privacidad ni de la protección de sus datos en esos otros sitios terceros. Dichos sitios están sujetos a sus propias políticas de privacidad por lo cual es recomendable que los consulte para confirmar que usted está de acuerdo con estas.
+        \n \n
+        Control de su información personal
+        \n \n
+        En cualquier momento usted puede restringir la recopilación o el uso de la información personal que es proporcionada a nuestro sitio web.  Cada vez que se le solicite rellenar un formulario, como el de alta de usuario, puede marcar o desmarcar la opción de recibir información por correo electrónico.  En caso de que haya marcado la opción de recibir nuestro boletín o publicidad usted puede cancelarla en cualquier momento.
+        \n \n
+        Esta compañía no venderá, cederá ni distribuirá la información personal que es recopilada sin su consentimiento, salvo que sea requerido por un juez con un orden judicial.
+        \n \n
+         Se reserva el derecho de cambiar los términos de la presente Política de Privacidad en cualquier momento.</string>
+
+    <!-- CERRAR SESIÓN -->
+
+    <string name="cerrarSesionTitulo">Cerrar sesión</string>
+    <string name="cerrarSesionPregunta">¿Estás segur@ que quieres cerrar sesión?</string>
+    <string name="cerrarSesionExito">¡Tu sesión se ha cerrado con éxito!</string>
+
+    <!-- BIFURCACIÓN -->
+
+    <string name="bifurcacion1">Quiero trabajar</string>
+    <string name="bifurcacion2">Quiero contratar</string>
+
+
+    <!-- INICIO DE SESIÓN -->
+
+    <string name="login_mail">Email</string>
+    <string name="login_psswd">Contraseña</string>
+    <string name="login_entrar">Entrar</string>
+    <string name="login_info">Inicia la sesión para apuntarte a castings.</string>
+    <string name="login_olvidada">¿Has olvidado tu contraseña?</string>
+    <string name="login_registrarse">Registrarme</string>
+
+    <string name="login_empresa_info">Inicia la sesión para encontrar el mejor talento</string>
+
+    <!-- RECUPERAR CONTRASEÑA -->
+
+    <string name="recuperar_password_inicio">Iniciar sesión</string>
+    <string name="recuperar_password_incorrecto">Email incorrecto</string>
+    <string name="recuperar_password_cuerpo">Coloca tu email y te enviaremos un código de activación para reestablecer tu contraseña</string>
+
+    <!-- REGISTRO -->
+
+    <string name="registro_nombre">Nombre</string>
+    <string name="registro_cuerpo">Regístrate y empieza a apuntarte a castings</string>
+    <string name="registro_google">Google</string>
+    <string name="registro_iniciar_sesion">Iniciar sesión</string>
+    <string name="registro_error1">Email erróneo</string>
+    <string name="registro_error2">La contraseña debe contener mín. 8 caracteres</string>
+
+    <!-- BUSCAR CASTINGS -->
+
+    <string name="buscarCastingTitulo">Buscar castings</string>
+    <string name="buscarCastingPalabraClave">Buscar por palabra clave</string>
+    <string name="buscarCastingCiudad">Ubicación</string>
+    <string name="buscarCastingCategoria">Categoría</string>
+    <string name="buscarCastingBtnBuscar">Buscar</string>
+    <string name="buscarCastingUltimasBusquedas">Íltimas búsquedas</string>
+    <string name="buscarCastingCLugar">Flamenco en Barcelona</string>
+    <string name="buscarCastingCCategoria">Flamenco</string>
+
+    <!-- CENTRO DE AYUDA -->
+
+    <string name="centroAyudaTitulo">Centro de Ayuda</string>
+    <string name="centroAyudaCuerpo">Estamos ensayando para ofrecerte el mejor expectáculo</string>
+
+    <!-- EDITAR TU BIOGRAFÍA -->
+
+    <string name="editarBiografíaTitulo">Editar biografía</string>
+    <string name="editarBiografíaBiografia">Escribe tu biografía</string>
+    <string name="editarBiografíaCiudad">Añade tu ciudad</string>
+
+    <!-- AÑADE TU EDUCACIÓN -->
+
+    <string name="editarEducacionTitulo">Añade tu educación</string>
+    <string name="editarEducacionFormacion">Nombre de la formación</string>
+    <string name="editarEducacionCentro">Nombre del centro educativo</string>
+    <string name="editarEducacionAños">Años</string>
+    <string name="editarEducacionMeses">Meses</string>
+    <string name="editarEducacionDescripcion">Describe lo que aprendiste</string>
 
 </resources>
