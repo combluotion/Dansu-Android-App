@@ -7,6 +7,7 @@ import com.example.elamoreslomasgrande.volley1.R;
 
 public class LoginEmpresa extends AppCompatActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

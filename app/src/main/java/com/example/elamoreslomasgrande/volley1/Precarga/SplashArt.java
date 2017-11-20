@@ -33,11 +33,11 @@ public class SplashArt extends AppCompatActivity {
                 } finally {
                     Intent i = null;
                     if (id_login > 0){
-                      i = new Intent(SplashArt.this, MapsActivity.class);
+                      i = new Intent(SplashArt.this, LoginPage.class);
                        // startActivity(i);
 
                     }else{
-                        i = new Intent(SplashArt.this,  MapsActivity.class);
+                        i = new Intent(SplashArt.this,  LoginPage.class);
 
                     }
                     if (i != null){
