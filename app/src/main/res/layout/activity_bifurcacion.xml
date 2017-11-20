@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:paddingHorizontal="46dp"
+    tools:context="com.example.elamoreslomasgrande.volley1.Login.Bifurcacion">
+
+    <ImageView
+        android:layout_width="111dp"
+        android:layout_height="111dp"
+        android:src="@drawable/circle"/>
+    <Button
+        android:layout_width="270dp"
+        android:layout_height="36dp"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif-medium"
+        android:textStyle="normal"
+        android:textColor="#000000"
+        android:letterSpacing="0.03"
+        android:paddingVertical="8dp"
+        android:layout_marginTop="73dp"
+        android:text="@string/bifurcacion1"/>
+    <Button
+        android:layout_width="270dp"
+        android:layout_height="36dp"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif-medium"
+        android:textStyle="normal"
+        android:textColor="#000000"
+        android:letterSpacing="0.03"
+        android:paddingVertical="8dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/bifurcacion2"/>
+
+</LinearLayout>
+

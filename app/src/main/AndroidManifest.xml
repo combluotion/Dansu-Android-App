@@ -52,10 +52,10 @@
         <activity
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps" />
-        <activity android:name=".Login.Bifurcacion" />
         <activity android:name=".Login.LoginEmpresa" />
         <activity android:name=".Login.RecuperarPass" />
-        <activity android:name=".Login.RegistroEmpresa"></activity>
+        <activity android:name=".Login.RegistroEmpresa" />
+        <activity android:name=".Login.Bifurcacion"></activity>
     </application>
 
 </manifest>
