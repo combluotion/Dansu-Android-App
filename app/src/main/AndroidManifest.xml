@@ -50,16 +50,15 @@
         <activity
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps">
-<<<<<<< HEAD
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter></activity>
-=======
-            </activity>
 
->>>>>>> parent of c76319d... Revert "LoginPage&Bifurcación&Register"
+
+
         <activity android:name=".Login.RecuperarPass" />
         <activity android:name=".Login.Bifurcacion" />
         <activity
