@@ -24,9 +24,8 @@ public class RegisterPage extends AppCompatActivity {
         EditText nombre = (EditText) findViewById(R.id.NameUser);
         EditText password = (EditText) findViewById(R.id.Password);
         String peticion = host_register+"/users/crear";
-        String registerMode = getIntent().getExtras().getString("modalidad");
 
-        Log.d("llego1",""+registerMode);
+        Log.d("llego1",peticion);
         new MyAsyncTask(this).execute(peticion,"nombre",nombre.getText().toString(),"password",password.getText().toString(),"email",email.getText().toString());
         Log.d("llego2","traza2");
 
