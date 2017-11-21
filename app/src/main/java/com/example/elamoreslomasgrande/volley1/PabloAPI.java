@@ -8,6 +8,8 @@ import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
 import okhttp3.ResponseBody;
 import retrofit2.Call;
+import retrofit2.http.Field;
+import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.Headers;
 import retrofit2.http.Multipart;
 import retrofit2.http.POST;
@@ -26,5 +28,12 @@ public interface PabloAPI {
     @POST("oferta/cargar")
     Call<ArrayList<Oferta>> getOfertas();
 
-    //hello
+    /*@FormUrlEncoded
+    @POST("/api/userlogin")
+    Call<ResponseBody>  getUserLogin(
+            @Field("client_id") String id,
+            @Field("client_secret") String secret,
+            @Field("username") String uname,
+            @Field("password") String password
+    ); */
 }

@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.elamoreslomasgrande.volley1.MainActivity"
-    tools:showIn="@layout/activity_main"
+    tools:context="com.example.elamoreslomasgrande.volley1.Navigation.Dashboard"
+    tools:showIn="@layout/fragment_dashboard"
     android:layout_marginTop="16dp">
 
     <android.support.v7.widget.RecyclerView

@@ -4,11 +4,28 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
+import android.widget.Toast;
 
+import com.example.elamoreslomasgrande.volley1.Ofertas.Oferta;
+import com.example.elamoreslomasgrande.volley1.Ofertas.OfertasAdapter;
+import com.example.elamoreslomasgrande.volley1.PabloAPI;
 import com.example.elamoreslomasgrande.volley1.R;
+import com.example.elamoreslomasgrande.volley1.RetrofitService;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -19,6 +36,13 @@ import com.example.elamoreslomasgrande.volley1.R;
  * create an instance of this fragment.
  */
 public class Dashboard extends Fragment {
+
+    private RecyclerView recyclerView;
+    private OfertasAdapter adapter;
+    private List<Oferta> ofertas;
+    private SwipeRefreshLayout swipeContainer;
+    public static final String LOG_TAG = OfertasAdapter.class.getName();
+
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -59,13 +83,26 @@ public class Dashboard extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
-    }
+        loadJSON();
+
+
+        }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_dashboard, container, false);
+        FrameLayout Lay = (FrameLayout) inflater.inflate(R.layout.fragment_dashboard, container, false);
+        swipeContainer = (SwipeRefreshLayout) Lay.findViewById(R.id.main_content);
+        swipeContainer.setColorSchemeResources(android.R.color.holo_orange_dark);
+        swipeContainer.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener(){
+            @Override
+            public void onRefresh(){
+                loadJSON();
+                Toast.makeText(getContext(), "Movies Refreshed", Toast.LENGTH_SHORT).show();
+            }
+        });
+        return Lay;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -106,4 +143,31 @@ public class Dashboard extends Fragment {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
+
+    private void loadJSON(){
+        RetrofitService retrofitService = RetrofitService.getInstance();
+        PabloAPI api = retrofitService.getApiProxyServer();
+        Call<ArrayList<Oferta>> call = api.getOfertas();
+        call.enqueue(new Callback<ArrayList<Oferta>>() {
+            @Override
+            public void onResponse(Call<ArrayList<Oferta>> call, Response<ArrayList<Oferta>> response) {
+                Log.d("traza", "por aqui");
+                Log.d("traza", response.body().toString());
+                ofertas = response.body();
+                recyclerView = (RecyclerView) getView().findViewById(R.id.recycler_view);
+                recyclerView.setLayoutManager(new GridLayoutManager(getActivity().getApplicationContext(), 2));
+                recyclerView.setAdapter(new OfertasAdapter(getActivity().getApplicationContext(), ofertas));
+                recyclerView.smoothScrollToPosition(0);
+                 if (swipeContainer.isRefreshing()){
+                        swipeContainer.setRefreshing(false);
+                    }
+            }
+
+            @Override
+            public void onFailure(Call<ArrayList<Oferta>> call, Throwable t) {
+                Log.d("traza","por alla");
+                Log.d("traza", t.toString());
+            }
+        });
+    };
 }

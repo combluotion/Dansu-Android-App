@@ -24,13 +24,18 @@
         <activity android:name=".Precarga.SplashArt">
 
         </activity>
-        <activity android:name=".MainActivity" />
         <activity android:name=".Main2Activity" />
         <activity android:name=".crop" />
         <activity android:name=".Login.LoginPage" />
         <activity
             android:name=".Navigation.Navigation"
-            android:label="@string/title_activity_navigation" />
+            android:label="@string/title_activity_navigation">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".Login.RegisterPage" />
 
         <!--
@@ -48,11 +53,7 @@
         <activity
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter></activity>
+</activity>
         <activity android:name=".Login.RecuperarPass" />
         <activity android:name=".Login.Bifurcacion"></activity>
     </application>
