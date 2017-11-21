@@ -37,6 +37,7 @@ public class LoginPage extends AppCompatActivity implements GoogleApiClient.Conn
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_page);
         signInButton = (SignInButton) findViewById(R.id.sign_in_button);
+        Log.d("hello1","hello2");
 
         //confirmar si esta logeado
         id_login = new Preferences(getApplicationContext()).getPreferenceDouble("id");
