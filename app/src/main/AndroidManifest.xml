@@ -21,9 +21,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Precarga.SplashArt">
-
-        </activity>
+        <activity android:name=".Precarga.SplashArt" />
         <activity android:name=".MainActivity" />
         <activity android:name=".Main2Activity" />
         <activity android:name=".crop" />
@@ -52,9 +50,77 @@
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter></activity>
+            </intent-filter>
+        </activity>
         <activity android:name=".Login.RecuperarPass" />
-        <activity android:name=".Login.Bifurcacion"></activity>
+        <activity android:name=".Login.Bifurcacion" />
+        <activity
+            android:name=".NavigationChildren.BuscarCasting"
+            android:label="@string/title_activity_buscar_casting"
+            android:parentActivityName=".Navigation.Navigation"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.elamoreslomasgrande.volley1.Navigation.Navigation" />
+        </activity>
+        <activity
+            android:name=".NavigationChildren.CuentaEmpresa"
+            android:label="@string/title_activity_cuenta_empresa"
+            android:parentActivityName=".Navigation.Navigation"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.elamoreslomasgrande.volley1.Navigation.Navigation" />
+        </activity>
+        <activity
+            android:name=".NavigationChildren.CuentaCandidato"
+            android:label="@string/title_activity_cuenta_candidato"
+            android:parentActivityName=".Navigation.Navigation"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.elamoreslomasgrande.volley1.Navigation.Navigation" />
+        </activity>
+        <activity
+            android:name=".NavigationChildren.NotificacionesConf"
+            android:label="@string/title_activity_notificaciones_conf"
+            android:parentActivityName=".Navigation.Navigation"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.elamoreslomasgrande.volley1.Navigation.Navigation" />
+        </activity>
+        <activity
+            android:name=".NavigationChildren.PoliticaPrivacidad"
+            android:label="@string/title_activity_politica_privacidad"
+            android:parentActivityName=".Navigation.Navigation"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.elamoreslomasgrande.volley1.Navigation.Navigation" />
+        </activity>
+        <activity
+            android:name=".NavigationChildren.CentroAyuda"
+            android:label="@string/title_activity_centro_ayuda"
+            android:parentActivityName=".Navigation.Navigation"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.elamoreslomasgrande.volley1.Navigation.Navigation" />
+        </activity>
+        <activity
+            android:name=".NavigationChildren.CerrarSesion"
+            android:label="@string/title_activity_cerrar_sesion"
+            android:parentActivityName=".Navigation.Navigation"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.elamoreslomasgrande.volley1.Navigation.Navigation" />
+        </activity>
+        <activity
+            android:name=".NavigationChildren.DarseBaja"
+            android:label="@string/title_activity_darse_baja"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>
