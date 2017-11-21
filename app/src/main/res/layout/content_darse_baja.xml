@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.elamoreslomasgrande.volley1.NavigationChildren.DarseBaja"
+    tools:showIn="@layout/activity_darse_baja">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+
+        <LinearLayout
+            android:layout_width="326dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="#f1f1f1
+">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:fontFamily="sans-serif-medium"
+                android:textStyle="normal"
+                android:textColor="#000000"
+                android:letterSpacing="0.03"
+                android:text="@string/bajaTitulo"
+                android:layout_marginTop="45dp"
+                />
+
+            <TextView
+                android:layout_width="285dp"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif-medium"
+                android:textStyle="normal"
+                android:textColor="#000000"
+                android:letterSpacing="0.03"
+                android:text="@string/bajaCuerpo"
+                android:textAlignment="center"
+                android:layout_marginTop="46dp"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="86dp"
+                android:layout_marginBottom="16dp">
+
+                <Button
+                    android:layout_width="122dp"
+                    android:layout_height="36dp"
+                    android:textAllCaps="false"
+                    android:layout_marginRight="46dp"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:textStyle="normal"
+                    android:textColor="#000000"
+                    android:letterSpacing="0.04"
+                    android:text="@string/btnAceptar"
+                    />
+                <Button
+                    android:layout_width="122dp"
+                    android:layout_height="36dp"
+                    android:textAllCaps="false"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:textStyle="normal"
+                    android:textColor="#000000"
+                    android:letterSpacing="0.04"
+                    android:text="@string/btnCancelar"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
