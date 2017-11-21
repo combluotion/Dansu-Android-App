@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.elamoreslomasgrande.volley1.NavigationChildren.CuentaCandidato"
+    tools:showIn="@layout/activity_cuenta_candidato">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.example.elamorhallegado.dansu.FragmentCuenta">
+
+        <!-- TODO: Update blank fragment layout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="9dp"
+            android:layout_marginHorizontal="17dp">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif"
+                android:textStyle="normal"
+                android:textColor="#000000"
+                android:letterSpacing="0.03"
+                android:hint="@string/cuentaNombreUsuario"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif"
+                android:textStyle="normal"
+                android:textColor="#000000"
+                android:letterSpacing="0.03"
+                android:layout_marginTop="9dp"
+                android:hint="@string/cuentaNombreApellidos"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif"
+                android:textStyle="normal"
+                android:textColor="#000000"
+                android:letterSpacing="0.03"
+                android:layout_marginTop="9dp"
+                android:hint="@string/cuentaEmpresaEmail"/>
+
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="122dp"
+            android:layout_height="36dp"
+            android:text="@string/cuentaEmpresaBtnGuardar"
+            android:layout_gravity="right"
+            android:layout_marginTop="22dp"
+            android:layout_marginRight="11dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif"
+            android:textStyle="normal"
+            android:textColor="#000000"
+            android:letterSpacing="0.03"
+            android:text="@string/cuentaCambiar"
+            android:layout_marginTop="39dp"
+            android:layout_marginLeft="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif"
+            android:textStyle="normal"
+            android:textColor="#000000"
+            android:letterSpacing="0.03"
+            android:text="@string/cuentaBaja"
+            android:layout_marginTop="39dp"
+            android:layout_marginLeft="20dp" />
+
+
+    </LinearLayout>
+</LinearLayout>

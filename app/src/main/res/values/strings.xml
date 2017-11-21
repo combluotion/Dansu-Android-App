@@ -6,6 +6,7 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="title_portfolio">Portfolio</string>
     <string name="option_home_setting">Settings</string>
     <string name="title_activity_home_app">home_app</string>
     <string name="title_activity_maps">Map</string>
@@ -13,6 +14,9 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="btnAceptar">Aceptar</string>
+    <string name="btnCancelar">Cancelar</string>
 
     <!-- CUENTA -->
 
@@ -167,5 +171,14 @@
     <string name="editarEducacionAños">Años</string>
     <string name="editarEducacionMeses">Meses</string>
     <string name="editarEducacionDescripcion">Describe lo que aprendiste</string>
+    <string name="title_activity_buscar_casting">BuscarCasting</string>
+    <string name="title_activity_main3">Main3Activity</string>
+    <string name="title_activity_cuenta_empresa">CuentaEmpresa</string>
+    <string name="title_activity_cuenta_candidato">CuentaCandidato</string>
+    <string name="title_activity_notificaciones_conf">NotificacionesConf</string>
+    <string name="title_activity_politica_privacidad">PoliticaPrivacidad</string>
+    <string name="title_activity_centro_ayuda">CentroAyuda</string>
+    <string name="title_activity_cerrar_sesion">CerrarSesion</string>
+    <string name="title_activity_darse_baja">DarseBaja</string>
 
 </resources>
