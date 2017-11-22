@@ -44,6 +44,8 @@ dependencies {
     compile 'com.adamstyrc.cookiecutter:cookie-cutter:1.0.2'
     //MAPS API
     compile 'com.google.android.gms:play-services-maps:11.4.2'
+    //BOTTOM NAVIGATION
+    compile "com.android.support:design:26.+"
 
     compile 'com.android.support:support-vector-drawable:26.1.0'
     testCompile 'junit:junit:4.12'

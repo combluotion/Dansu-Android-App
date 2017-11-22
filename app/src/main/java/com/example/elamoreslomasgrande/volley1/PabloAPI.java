@@ -28,7 +28,7 @@ public interface PabloAPI {
     @POST("oferta/cargar")
     Call<ArrayList<Oferta>> getOfertas();
 
-    /*@FormUrlEncoded
+ /*   @FormUrlEncoded
     @POST("/api/userlogin")
     Call<ResponseBody>  getUserLogin(
             @Field("client_id") String id,
