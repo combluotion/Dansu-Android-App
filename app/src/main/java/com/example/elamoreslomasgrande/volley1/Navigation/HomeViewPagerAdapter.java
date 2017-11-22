@@ -5,6 +5,9 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
+import com.example.elamoreslomasgrande.volley1.Navigation.Guardados.Dashboard;
+import com.example.elamoreslomasgrande.volley1.Navigation.Home.Home;
+
 /**
  * Created by elamoreslomasgrande on 16/11/2017.
  */
