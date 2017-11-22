@@ -1,12 +1,16 @@
 package com.example.elamoreslomasgrande.volley1.Navigation;
 
+
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTabHost;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TabHost;
 
 import com.example.elamoreslomasgrande.volley1.R;
 
@@ -23,6 +27,8 @@ public class Home extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+
+    private FragmentTabHost mTabHost;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -65,7 +71,15 @@ public class Home extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false);
+       //  inflater.inflate(R.layout.fragment_home, container, false);
+        mTabHost = new FragmentTabHost(getActivity());
+        mTabHost.setup(getActivity(), getChildFragmentManager(), R.id.fragment1);
+
+        mTabHost.addTab(mTabHost.newTabSpec("casting").setIndicator("Castings"),
+                Castings.class, null);
+        mTabHost.addTab(mTabHost.newTabSpec("feed").setIndicator("Feed"),
+                Notificaciones.class, null);
+        return mTabHost;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
