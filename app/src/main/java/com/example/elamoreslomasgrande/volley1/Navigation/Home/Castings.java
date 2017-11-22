@@ -151,7 +151,7 @@ public class Castings extends Fragment {
                 Log.d("traza", response.body().toString());
                 ofertas = response.body();
                 recyclerView = (RecyclerView) getView().findViewById(R.id.recycler_view);
-                recyclerView.setLayoutManager(new GridLayoutManager(getActivity().getApplicationContext(), 2));
+                recyclerView.setLayoutManager(new GridLayoutManager(getActivity().getApplicationContext(), 1));
                 recyclerView.setAdapter(new OfertasAdapter(getActivity().getApplicationContext(), ofertas));
                 recyclerView.smoothScrollToPosition(0);
 
