@@ -3,15 +3,20 @@ package com.example.elamoreslomasgrande.volley1.Navigation;
 import android.os.Bundle;
 import android.support.annotation.ColorInt;
 import android.support.annotation.NonNull;
+import android.support.design.internal.BottomNavigationItemView;
+import android.support.design.internal.BottomNavigationMenuView;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
 import com.example.elamoreslomasgrande.volley1.R;
+
+import java.lang.reflect.Field;
 
 public class Navigation extends FragmentActivity {
     HomeViewPagerAdapter homeTabsAdapter = new HomeViewPagerAdapter(getSupportFragmentManager());
