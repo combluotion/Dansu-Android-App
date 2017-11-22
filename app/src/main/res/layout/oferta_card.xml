@@ -8,7 +8,7 @@
     <android.support.v7.widget.CardView
         android:id="@+id/card_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="@dimen/card_margin"
         android:elevation="3dp"
@@ -30,20 +30,21 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="28dp"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity=""
                 android:layout_marginTop="16dp">
 
 
 
-                <CheckBox android:layout_width="wrap_content"
+                <ImageView android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:button="@drawable/ImageUser" />
+                    android:src="@drawable/imageuser" />
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:orientation="vertical">
 
                     <TextView
@@ -60,7 +61,7 @@
                     <TextView
                         android:id="@+id/userrating"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_below="@id/title"
                         android:layout_weight="1"
                         android:paddingBottom="@dimen/user_rating_padding_bottom"
@@ -73,7 +74,7 @@
 
                 <CheckBox android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:button="@drawable/LoveImage" />
+                    android:button="@drawable/loveimage" />
 
             </LinearLayout>
 
