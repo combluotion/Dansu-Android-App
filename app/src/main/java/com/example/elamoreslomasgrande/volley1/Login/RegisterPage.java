@@ -1,5 +1,6 @@
 package com.example.elamoreslomasgrande.volley1.Login;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -29,5 +30,9 @@ public class RegisterPage extends AppCompatActivity {
         new MyAsyncTask(this).execute(peticion,"nombre",nombre.getText().toString(),"password",password.getText().toString(),"email",email.getText().toString());
         Log.d("llego2","traza2");
 
+    }
+
+    public void goLoginPage(View view) {
+        startActivity(new Intent(this, LoginPage.class));
     }
 }
