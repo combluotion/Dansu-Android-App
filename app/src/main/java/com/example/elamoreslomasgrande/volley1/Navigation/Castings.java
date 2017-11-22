@@ -30,19 +30,22 @@ import retrofit2.Response;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link Dashboard.OnFragmentInteractionListener} interface
+ * {@link Castings.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link Dashboard#newInstance} factory method to
+ * Use the {@link Castings#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class Dashboard extends Fragment {
-
-
-
+public class Castings extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+
+    private RecyclerView recyclerView;
+    private OfertasAdapter adapter;
+    private List<Oferta> ofertas;
+    private SwipeRefreshLayout swipeContainer;
+    public static final String LOG_TAG = OfertasAdapter.class.getName();
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -50,7 +53,7 @@ public class Dashboard extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public Dashboard() {
+    public Castings() {
         // Required empty public constructor
     }
 
@@ -60,11 +63,11 @@ public class Dashboard extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment Dashboard.
+     * @return A new instance of fragment Castings.
      */
     // TODO: Rename and change types and number of parameters
-    public static Dashboard newInstance(String param1, String param2) {
-        Dashboard fragment = new Dashboard();
+    public static Castings newInstance(String param1, String param2) {
+        Castings fragment = new Castings();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -79,17 +82,23 @@ public class Dashboard extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
-
-
-
-        }
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        FrameLayout Lay = (FrameLayout) inflater.inflate(R.layout.fragment_dashboard, container, false);
-
+         FrameLayout Lay =(FrameLayout) inflater.inflate(R.layout.fragment_castings, container, false);
+        swipeContainer = (SwipeRefreshLayout) Lay.findViewById(R.id.main_content);
+        swipeContainer.setColorSchemeResources(android.R.color.holo_orange_dark);
+        loadJSON();
+        swipeContainer.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener(){
+            @Override
+            public void onRefresh(){
+                loadJSON();
+                Toast.makeText(getContext(), "Movies Refreshed", Toast.LENGTH_SHORT).show();
+            }
+        });
         return Lay;
     }
 
@@ -132,4 +141,31 @@ public class Dashboard extends Fragment {
         void onFragmentInteraction(Uri uri);
     }
 
+    private void loadJSON(){
+        RetrofitService retrofitService = RetrofitService.getInstance();
+        PabloAPI api = retrofitService.getApiProxyServer();
+        Call<ArrayList<Oferta>> call = api.getOfertas();
+        call.enqueue(new Callback<ArrayList<Oferta>>() {
+            @Override
+            public void onResponse(Call<ArrayList<Oferta>> call, Response<ArrayList<Oferta>> response) {
+                Log.d("traza", "por aqui");
+                Log.d("traza", response.body().toString());
+                ofertas = response.body();
+                recyclerView = (RecyclerView) getView().findViewById(R.id.recycler_view);
+                recyclerView.setLayoutManager(new GridLayoutManager(getActivity().getApplicationContext(), 2));
+                recyclerView.setAdapter(new OfertasAdapter(getActivity().getApplicationContext(), ofertas));
+                recyclerView.smoothScrollToPosition(0);
+
+            }
+
+            @Override
+            public void onFailure(Call<ArrayList<Oferta>> call, Throwable t) {
+                Log.d("traza","por alla");
+                Log.d("traza", t.toString());
+            }
+        });
+        if (swipeContainer.isRefreshing()){
+            swipeContainer.setRefreshing(false);
+        }
+    };
 }

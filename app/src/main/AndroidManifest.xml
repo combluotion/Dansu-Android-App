@@ -32,11 +32,7 @@
         <activity
             android:name=".Navigation.Navigation"
             android:label="@string/title_activity_navigation">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".Login.RegisterPage" />
 
@@ -56,13 +52,20 @@
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps">
 
-</activity>
+        </activity>
 
 
 
 
         <activity android:name=".Login.RecuperarPass" />
-        <activity android:name=".Login.Bifurcacion" />
+        <activity android:name=".Login.Bifurcacion" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
         <activity
             android:name=".NavigationChildren.BuscarCasting"
             android:label="@string/title_activity_buscar_casting"
