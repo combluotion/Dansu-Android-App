@@ -83,7 +83,7 @@ public class Dashboard extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
-        loadJSON();
+
 
 
         }
@@ -95,6 +95,7 @@ public class Dashboard extends Fragment {
         FrameLayout Lay = (FrameLayout) inflater.inflate(R.layout.fragment_dashboard, container, false);
         swipeContainer = (SwipeRefreshLayout) Lay.findViewById(R.id.main_content);
         swipeContainer.setColorSchemeResources(android.R.color.holo_orange_dark);
+        loadJSON();
         swipeContainer.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener(){
             @Override
             public void onRefresh(){
@@ -158,9 +159,7 @@ public class Dashboard extends Fragment {
                 recyclerView.setLayoutManager(new GridLayoutManager(getActivity().getApplicationContext(), 2));
                 recyclerView.setAdapter(new OfertasAdapter(getActivity().getApplicationContext(), ofertas));
                 recyclerView.smoothScrollToPosition(0);
-                 if (swipeContainer.isRefreshing()){
-                        swipeContainer.setRefreshing(false);
-                    }
+
             }
 
             @Override
@@ -169,5 +168,8 @@ public class Dashboard extends Fragment {
                 Log.d("traza", t.toString());
             }
         });
+        if (swipeContainer.isRefreshing()){
+            swipeContainer.setRefreshing(false);
+        }
     };
 }

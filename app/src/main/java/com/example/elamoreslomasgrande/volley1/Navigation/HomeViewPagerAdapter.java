@@ -14,8 +14,9 @@ public class HomeViewPagerAdapter extends FragmentPagerAdapter {
     public static final int FRAGMENT_A_INDEX = 0;
     public static final int FRAGMENT_B_INDEX = 1;
     public static final int FRAGMENT_C_INDEX = 2;
+    public static final int FRAGMENT_D_INDEX = 3;
 
-    public static final int FRAGMENTS_COUNT = 3;
+    public static final int FRAGMENTS_COUNT = 4;
 
     public HomeViewPagerAdapter(FragmentManager fm) {
         super(fm);
@@ -30,6 +31,8 @@ public class HomeViewPagerAdapter extends FragmentPagerAdapter {
                 return Dashboard.newInstance("Dashboard","dashboard");
             case FRAGMENT_C_INDEX:
                 return Notificaciones.newInstance("Notificaciones","notificaciones");
+            case FRAGMENT_D_INDEX:
+                return Portfolio.newInstance("Notificaciones","notificaciones");
             default:
                 return null;
         }

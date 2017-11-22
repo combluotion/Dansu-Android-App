@@ -1,6 +1,7 @@
 package com.example.elamoreslomasgrande.volley1.Navigation;
 
 import android.os.Bundle;
+import android.support.annotation.ColorInt;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.FragmentActivity;
@@ -15,7 +16,7 @@ import com.example.elamoreslomasgrande.volley1.R;
 public class Navigation extends FragmentActivity {
     HomeViewPagerAdapter homeTabsAdapter = new HomeViewPagerAdapter(getSupportFragmentManager());
     private TextView mTextMessage;
-    ViewPager vp;
+    LockableViewPager vp;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -24,13 +25,16 @@ public class Navigation extends FragmentActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_home:
-                    vp.setCurrentItem(HomeViewPagerAdapter.FRAGMENT_B_INDEX, false);
+                    vp.setCurrentItem(HomeViewPagerAdapter.FRAGMENT_A_INDEX, false);
                     return true;
                 case R.id.navigation_dashboard:
-                    vp.setCurrentItem(HomeViewPagerAdapter.FRAGMENT_A_INDEX, false);
+                    vp.setCurrentItem(HomeViewPagerAdapter.FRAGMENT_B_INDEX, false);
                     return true;
                 case R.id.navigation_notifications:
                     vp.setCurrentItem(HomeViewPagerAdapter.FRAGMENT_C_INDEX, false);
+                    return true;
+                case R.id.navigation_portfolio:
+                    vp.setCurrentItem(HomeViewPagerAdapter.FRAGMENT_D_INDEX, false);
                     return true;
             }
             return false;
@@ -42,8 +46,10 @@ public class Navigation extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation);
 
-        vp = (ViewPager) findViewById(R.id.vpager);
+        vp = (LockableViewPager) findViewById(R.id.vpager);
         vp.setAdapter(homeTabsAdapter);
+        vp.setSwipeable(false);
+
 
 
 
@@ -52,6 +58,7 @@ public class Navigation extends FragmentActivity {
 
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
     }
 
 
