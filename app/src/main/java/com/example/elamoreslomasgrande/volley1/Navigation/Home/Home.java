@@ -1,48 +1,32 @@
-package com.example.elamoreslomasgrande.volley1.Navigation;
+package com.example.elamoreslomasgrande.volley1.Navigation.Home;
 
-import android.content.Context;
+
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.util.Log;
+import android.support.v4.app.FragmentTabHost;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.FrameLayout;
-import android.widget.Toast;
 
-import com.example.elamoreslomasgrande.volley1.Ofertas.Oferta;
-import com.example.elamoreslomasgrande.volley1.Ofertas.OfertasAdapter;
-import com.example.elamoreslomasgrande.volley1.PabloAPI;
+import com.example.elamoreslomasgrande.volley1.Navigation.Notificaciones;
 import com.example.elamoreslomasgrande.volley1.R;
-import com.example.elamoreslomasgrande.volley1.RetrofitService;
-
-import java.util.ArrayList;
-import java.util.List;
-
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link Dashboard.OnFragmentInteractionListener} interface
+ * {@link Home.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link Dashboard#newInstance} factory method to
+ * Use the {@link Home#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class Dashboard extends Fragment {
-
-
-
+public class Home extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+
+    private FragmentTabHost mTabHost;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -50,7 +34,7 @@ public class Dashboard extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public Dashboard() {
+    public Home() {
         // Required empty public constructor
     }
 
@@ -60,11 +44,11 @@ public class Dashboard extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment Dashboard.
+     * @return A new instance of fragment Home.
      */
     // TODO: Rename and change types and number of parameters
-    public static Dashboard newInstance(String param1, String param2) {
-        Dashboard fragment = new Dashboard();
+    public static Home newInstance(String param1, String param2) {
+        Home fragment = new Home();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -79,18 +63,21 @@ public class Dashboard extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
-
-
-
-        }
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        FrameLayout Lay = (FrameLayout) inflater.inflate(R.layout.fragment_dashboard, container, false);
+       //  inflater.inflate(R.layout.fragment_home, container, false);
+        mTabHost = new FragmentTabHost(getActivity());
+        mTabHost.setup(getActivity(), getChildFragmentManager(), R.id.fragment1);
 
-        return Lay;
+        mTabHost.addTab(mTabHost.newTabSpec("casting").setIndicator("Castings"),
+                Castings.class, null);
+        mTabHost.addTab(mTabHost.newTabSpec("feed").setIndicator("Feed"),
+                Notificaciones.class, null);
+        return mTabHost;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -100,7 +87,7 @@ public class Dashboard extends Fragment {
         }
     }
 
-  /*  @Override
+   /* @Override
     public void onAttach(Context context) {
         super.onAttach(context);
         if (context instanceof OnFragmentInteractionListener) {
@@ -130,6 +117,5 @@ public class Dashboard extends Fragment {
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
-    }
-
+}
 }
