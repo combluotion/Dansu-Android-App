@@ -30,9 +30,9 @@ public interface PabloAPI {
 
     @Headers("Content-Type: application/json")
     @POST("oferta/misofertas")
-    public void misofertas(
-    @Field("id") int id_usuario);
-    Call<ArrayList<Oferta>> getMisOfertas();
+    Call<ArrayList<Oferta>> getMisOfertas(
+            @Field("id") int id_usuario
+    );
 
     @Headers("Content-Type: application/json")
     @POST("portfolio/feed")

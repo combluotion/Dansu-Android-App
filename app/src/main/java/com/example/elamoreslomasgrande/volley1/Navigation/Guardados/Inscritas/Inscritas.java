@@ -143,7 +143,7 @@ public class Inscritas extends Fragment {
     private void loadJSON(){
         RetrofitService retrofitService = RetrofitService.getInstance();
         PabloAPI api = retrofitService.getApiProxyServer();
-        Call<ArrayList<Oferta>> call = api.getMisOfertas();
+        Call<ArrayList<Oferta>> call = api.getMisOfertas(1);
         call.enqueue(new Callback<ArrayList<Oferta>>() {
             @Override
             public void onResponse(Call<ArrayList<Oferta>> call, Response<ArrayList<Oferta>> response) {
