@@ -79,7 +79,7 @@ public class Dashboard extends Fragment {
         mTabHost.setup(getActivity(), getChildFragmentManager(), R.id.fragment1);
 
         mTabHost.addTab(mTabHost.newTabSpec("inscritas").setIndicator("Inscritas"),
-                Castings.class, null);
+                Notificaciones.class, null);
         mTabHost.addTab(mTabHost.newTabSpec("guardadas").setIndicator("Guardadas"),
                 Notificaciones.class, null);
         mTabHost.addTab(mTabHost.newTabSpec("mensajes").setIndicator("Mensajes"),
