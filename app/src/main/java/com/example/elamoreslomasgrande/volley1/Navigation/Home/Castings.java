@@ -95,7 +95,7 @@ public class Castings extends Fragment {
             @Override
             public void onRefresh(){
                 loadJSON();
-                Toast.makeText(getContext(), "Movies Refreshed", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), "¡Baila!", Toast.LENGTH_SHORT).show();
             }
         });
         return Lay;
