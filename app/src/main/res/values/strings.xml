@@ -181,4 +181,6 @@
     <string name="title_activity_cerrar_sesion">CerrarSesion</string>
     <string name="title_activity_darse_baja">DarseBaja</string>
 
+    <string name="inscrito_exito">¡Enhorabuena te has inscrito a la oferta! </string>
+
 </resources>

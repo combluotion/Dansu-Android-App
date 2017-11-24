@@ -32,7 +32,11 @@
         <activity
             android:name=".Navigation.Navigation"
             android:label="@string/title_activity_navigation">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".Login.RegisterPage" />
 
@@ -59,11 +63,7 @@
 
         <activity android:name=".Login.RecuperarPass" />
         <activity android:name=".Login.Bifurcacion" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <activity
