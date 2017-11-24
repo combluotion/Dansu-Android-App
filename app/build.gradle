@@ -27,13 +27,13 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile 'com.android.support:animated-vector-drawable:26.1.0'
-    compile 'com.google.firebase:firebase-auth:11.4.2'
-    compile 'com.google.android.gms:play-services-auth:11.4.2'
+    compile 'com.google.firebase:firebase-auth:11.6.0'
+    compile 'com.google.android.gms:play-services-auth:11.6.0'
     compile 'com.android.support:appcompat-v7:26.1.0'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.android.support:recyclerview-v7:26.1.0'
     compile 'com.android.support:design:26.1.0'
-    compile 'com.squareup.okhttp3:okhttp:3.2.0'
+    compile 'com.squareup.okhttp3:okhttp:3.8.0'
     compile 'com.android.support:cardview-v7:26.1.0'
 
     // RETROFIT
@@ -43,9 +43,9 @@ dependencies {
     //IMAGE CROPPER
     compile 'com.adamstyrc.cookiecutter:cookie-cutter:1.0.2'
     //MAPS API
-    compile 'com.google.android.gms:play-services-maps:11.4.2'
+    compile 'com.google.android.gms:play-services-maps:11.6.0'
     //BOTTOM NAVIGATION
-    compile "com.android.support:design:26.+"
+    compile "com.android.support:design:26.1.0"
 
     compile 'com.android.support:support-vector-drawable:26.1.0'
     testCompile 'junit:junit:4.12'

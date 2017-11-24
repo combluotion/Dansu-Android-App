@@ -75,7 +75,7 @@ public class Home extends Fragment {
 
         mTabHost.addTab(mTabHost.newTabSpec("casting").setIndicator("Castings"),
                 Castings.class, null);
-        mTabHost.addTab(mTabHost.newTabSpec("feed").setIndicator("Publicacion"),
+        mTabHost.addTab(mTabHost.newTabSpec("feed").setIndicator("Publicaciones"),
                 Feed.class, null);
         return mTabHost;
     }

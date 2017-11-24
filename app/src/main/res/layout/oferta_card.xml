@@ -10,8 +10,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_margin="@dimen/card_margin"
-        android:elevation="3dp"
         card_view:cardCornerRadius="@dimen/card_movie_radius">
 
         <LinearLayout
@@ -19,58 +17,89 @@
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:orientation="vertical"
-            android:layout_margin="0dp">
+            android:layout_margin="4dp"
+            android:padding="12dp">
 
 
-            <VideoView
-                android:id="@+id/videoView"
-                android:layout_width="match_parent"
-                android:layout_height="328dp" />
+            <ImageView
+                android:id="@+id/bbb"
+                android:layout_width="328dp"
+                android:layout_height="102dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="16dp"
+                android:src="@drawable/silent"
+                />
 
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif-medium"
+                android:textStyle="normal"
+                android:textColor="#000000"
+                android:letterSpacing="0.03"
+                android:text="Titulo del Casting"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:id="@+id/userrating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif"
+                android:textStyle="normal"
+                android:textColor="#000000"
+                android:letterSpacing="0.03"
+                android:text="Empresa"
+                android:layout_marginBottom="8dp"
+                />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity=""
-                android:layout_marginTop="16dp">
+                android:orientation="horizontal">
 
 
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="8.4dp"
+                    android:layout_height="12dp"
+                    android:layout_gravity="center"
+                    card_view:srcCompat="@drawable/ic_notifications_black_24dp" />
 
-                <ImageView android:layout_width="wrap_content"
+                <TextView
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/imageuser" />
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif"
+                    android:textStyle="normal"
+                    android:textColor="#000000"
+                    android:letterSpacing="0.03"
+                    android:text="TextView"
+                    />
 
-                <LinearLayout
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/ccc"
+                    android:layout_width="122dp"
+                    android:layout_height="36dp"
+                    android:text="Activo" />
+
+                <TextView
+                    android:id="@+id/ddd"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/title"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:paddingLeft="@dimen/movie_title_padding"
-                        android:paddingRight="@dimen/movie_title_padding"
-                        android:paddingTop="@dimen/movie_title_padding"
-                        android:textColor="@color/colorAccent"
-                        android:textSize="@dimen/movie_title" />
-
-                    <TextView
-                        android:id="@+id/userrating"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/title"
-                        android:layout_weight="1"
-                        android:paddingBottom="@dimen/user_rating_padding_bottom"
-                        android:paddingLeft="@dimen/movie_title_padding"
-                        android:paddingRight="@dimen/movie_title_padding"
-                        android:textColor="@color/colorAccent"
-                        android:textSize="@dimen/user_rating" />
-                </LinearLayout>
-
+                    android:text="TextView"
+                    />
 
                 <CheckBox android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

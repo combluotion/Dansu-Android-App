@@ -26,7 +26,9 @@
 
         </activity>
 
-        <activity android:name=".Main2Activity" />
+        <activity android:name=".Main2Activity">
+
+        </activity>
         <activity android:name=".crop" />
         <activity android:name=".Login.LoginPage" />
         <activity
@@ -64,7 +66,14 @@
         <activity android:name=".Login.RecuperarPass" />
         <activity android:name=".Login.Bifurcacion" >
 
+<<<<<<< HEAD
         </activity>
+=======
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+</activity>
+>>>>>>> 1b3934b951db931edda598435d764637634d1514
 
         <activity
             android:name=".NavigationChildren.BuscarCasting"
