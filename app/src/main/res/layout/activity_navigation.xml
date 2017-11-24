@@ -35,7 +35,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:menu="@menu/navigation"
         android:layout_weight="1"
-        app:itemIconTint="@color/buttons"/>
+        app:itemIconTint="@color/backgroundToolBar"/>
 </LinearLayout>
 
 
