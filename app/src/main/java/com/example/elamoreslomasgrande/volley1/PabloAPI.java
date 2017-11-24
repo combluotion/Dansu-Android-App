@@ -1,5 +1,6 @@
 package com.example.elamoreslomasgrande.volley1;
 
+import com.example.elamoreslomasgrande.volley1.Feed.Publicacion;
 import com.example.elamoreslomasgrande.volley1.Ofertas.Oferta;
 
 import java.util.ArrayList;
@@ -9,7 +10,6 @@ import okhttp3.RequestBody;
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.http.Field;
-import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.Headers;
 import retrofit2.http.Multipart;
 import retrofit2.http.POST;
@@ -27,6 +27,16 @@ public interface PabloAPI {
     @Headers("Content-Type: application/json")
     @POST("oferta/cargar")
     Call<ArrayList<Oferta>> getOfertas();
+
+    @Headers("Content-Type: application/json")
+    @POST("oferta/misofertas")
+    Call<ArrayList<Oferta>> getMisOfertas(
+            @Field("id") int id_usuario
+    );
+
+    @Headers("Content-Type: application/json")
+    @POST("portfolio/feed")
+    Call<ArrayList<Publicacion>> getFeed();
 
  /*   @FormUrlEncoded
     @POST("/api/userlogin")

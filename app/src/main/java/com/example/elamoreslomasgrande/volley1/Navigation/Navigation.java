@@ -20,7 +20,7 @@ import java.lang.reflect.Field;
 
 public class Navigation extends FragmentActivity {
     HomeViewPagerAdapter homeTabsAdapter = new HomeViewPagerAdapter(getSupportFragmentManager());
-    private TextView mTextMessage;
+
     LockableViewPager vp;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener

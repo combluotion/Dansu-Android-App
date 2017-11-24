@@ -4,11 +4,28 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
+import android.widget.Toast;
 
+import com.example.elamoreslomasgrande.volley1.Feed.FeedAdapter;
+import com.example.elamoreslomasgrande.volley1.Feed.Publicacion;
+import com.example.elamoreslomasgrande.volley1.PabloAPI;
 import com.example.elamoreslomasgrande.volley1.R;
+import com.example.elamoreslomasgrande.volley1.RetrofitService;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -28,6 +45,11 @@ public class Feed extends Fragment {
     private String mParam1;
     private String mParam2;
 
+    private RecyclerView recyclerView;
+    private FeedAdapter adapter;
+    private List<Publicacion> ofertas;
+    private SwipeRefreshLayout swipeContainer;
+    public static final String LOG_TAG = FeedAdapter.class.getName();
     private OnFragmentInteractionListener mListener;
 
     public Feed() {
@@ -40,7 +62,7 @@ public class Feed extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment Feed.
+     * @return A new instance of fragment Publicacion.
      */
     // TODO: Rename and change types and number of parameters
     public static Feed newInstance(String param1, String param2) {
@@ -65,7 +87,18 @@ public class Feed extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_feed, container, false);
+        FrameLayout Lay = (FrameLayout) inflater.inflate(R.layout.fragment_feed, container, false);
+        swipeContainer = (SwipeRefreshLayout) Lay.findViewById(R.id.main_content);
+        swipeContainer.setColorSchemeResources(android.R.color.holo_orange_dark);
+        loadJSON();
+        swipeContainer.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener(){
+            @Override
+            public void onRefresh(){
+                loadJSON();
+                Toast.makeText(getContext(), "¡Baila!", Toast.LENGTH_SHORT).show();
+            }
+        });
+        return Lay;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -75,7 +108,7 @@ public class Feed extends Fragment {
         }
     }
 
-    @Override
+/*    @Override
     public void onAttach(Context context) {
         super.onAttach(context);
         if (context instanceof OnFragmentInteractionListener) {
@@ -84,7 +117,7 @@ public class Feed extends Fragment {
             throw new RuntimeException(context.toString()
                     + " must implement OnFragmentInteractionListener");
         }
-    }
+    } */
 
     @Override
     public void onDetach() {
@@ -106,4 +139,33 @@ public class Feed extends Fragment {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
+
+    private void loadJSON(){
+        RetrofitService retrofitService = RetrofitService.getInstance();
+        PabloAPI api = retrofitService.getApiProxyServer();
+        Call<ArrayList<Publicacion>> call = api.getFeed();
+        call.enqueue(new Callback<ArrayList<Publicacion>>() {
+            @Override
+            public void onResponse(Call<ArrayList<Publicacion>> call, Response<ArrayList<Publicacion>> response) {
+                Log.d("traza", "por aqui");
+                Log.d("traza", response.body().toString());
+                ofertas = response.body();
+                recyclerView = (RecyclerView) getView().findViewById(R.id.recycler_view);
+                recyclerView.setLayoutManager(new GridLayoutManager(getActivity().getApplicationContext(), 1));
+                recyclerView.setAdapter(new FeedAdapter(getActivity().getApplicationContext(), ofertas));
+                recyclerView.smoothScrollToPosition(0);
+
+            }
+
+            @Override
+            public void onFailure(Call<ArrayList<Publicacion>> call, Throwable t) {
+                Log.d("traza","por alla");
+                Log.d("traza", t.toString());
+            }
+        });
+        if (swipeContainer.isRefreshing()){
+            swipeContainer.setRefreshing(false);
+        }
+    };
+
 }

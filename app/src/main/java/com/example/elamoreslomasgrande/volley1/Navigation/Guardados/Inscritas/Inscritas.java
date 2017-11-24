@@ -1,5 +1,6 @@
-package com.example.elamoreslomasgrande.volley1.Navigation.Home;
+package com.example.elamoreslomasgrande.volley1.Navigation.Guardados.Inscritas;
 
+import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -29,16 +30,20 @@ import retrofit2.Response;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link Castings.OnFragmentInteractionListener} interface
+ * {@link Inscritas.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link Castings#newInstance} factory method to
+ * Use the {@link Inscritas#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class Castings extends Fragment {
+public class Inscritas extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+
+    // TODO: Rename and change types of parameters
+    private String mParam1;
+    private String mParam2;
 
     private RecyclerView recyclerView;
     private OfertasAdapter adapter;
@@ -46,13 +51,9 @@ public class Castings extends Fragment {
     private SwipeRefreshLayout swipeContainer;
     public static final String LOG_TAG = OfertasAdapter.class.getName();
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
     private OnFragmentInteractionListener mListener;
 
-    public Castings() {
+    public Inscritas() {
         // Required empty public constructor
     }
 
@@ -62,11 +63,11 @@ public class Castings extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment Castings.
+     * @return A new instance of fragment Inscritas.
      */
     // TODO: Rename and change types and number of parameters
-    public static Castings newInstance(String param1, String param2) {
-        Castings fragment = new Castings();
+    public static Inscritas newInstance(String param1, String param2) {
+        Inscritas fragment = new Inscritas();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -87,7 +88,7 @@ public class Castings extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-         FrameLayout Lay =(FrameLayout) inflater.inflate(R.layout.fragment_castings, container, false);
+        FrameLayout Lay =(FrameLayout) inflater.inflate(R.layout.fragment_inscritas, container, false);
         swipeContainer = (SwipeRefreshLayout) Lay.findViewById(R.id.main_content);
         swipeContainer.setColorSchemeResources(android.R.color.holo_orange_dark);
         loadJSON();
@@ -98,8 +99,7 @@ public class Castings extends Fragment {
                 Toast.makeText(getContext(), "¡Baila!", Toast.LENGTH_SHORT).show();
             }
         });
-        return Lay;
-    }
+        return Lay;}
 
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
@@ -143,7 +143,7 @@ public class Castings extends Fragment {
     private void loadJSON(){
         RetrofitService retrofitService = RetrofitService.getInstance();
         PabloAPI api = retrofitService.getApiProxyServer();
-        Call<ArrayList<Oferta>> call = api.getOfertas();
+        Call<ArrayList<Oferta>> call = api.getMisOfertas(1);
         call.enqueue(new Callback<ArrayList<Oferta>>() {
             @Override
             public void onResponse(Call<ArrayList<Oferta>> call, Response<ArrayList<Oferta>> response) {
@@ -167,4 +167,5 @@ public class Castings extends Fragment {
             swipeContainer.setRefreshing(false);
         }
     };
+
 }
