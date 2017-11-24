@@ -59,22 +59,9 @@
             android:label="@string/title_activity_maps">
 
         </activity>
-
-
-
-
         <activity android:name=".Login.RecuperarPass" />
         <activity android:name=".Login.Bifurcacion" >
-
-<<<<<<< HEAD
         </activity>
-=======
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-
-</activity>
->>>>>>> 1b3934b951db931edda598435d764637634d1514
-
         <activity
             android:name=".NavigationChildren.BuscarCasting"
             android:label="@string/title_activity_buscar_casting"

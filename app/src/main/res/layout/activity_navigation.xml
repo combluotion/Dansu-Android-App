@@ -8,14 +8,6 @@
     android:orientation="vertical"
     tools:context="com.example.elamoreslomasgrande.volley1.Navigation.Navigation">
 
-<<<<<<< HEAD
-    <android.support.design.widget.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
-=======
->>>>>>> 1b3934b951db931edda598435d764637634d1514
-
     <include
         layout="@layout/toolbar_presonalized"
         android:layout_width="match_parent"
