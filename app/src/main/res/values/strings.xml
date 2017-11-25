@@ -183,4 +183,10 @@
 
     <string name="inscrito_exito">¡Enhorabuena te has inscrito a la oferta! </string>
 
+
+    <!-- TAB HOME -->
+
+    <string name="Home_Tab1">Castings</string>
+    <string name="Home_Tab2">Publicaciones</string>
+
 </resources>
