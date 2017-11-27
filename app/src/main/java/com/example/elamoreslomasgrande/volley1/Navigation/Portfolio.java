@@ -1,6 +1,5 @@
 package com.example.elamoreslomasgrande.volley1.Navigation;
 
-import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -13,9 +12,9 @@ import com.example.elamoreslomasgrande.volley1.R;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link Portfolio.OnFragmentInteractionListener} interface
+ * {@link PortfolioChildren.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link Portfolio#newInstance} factory method to
+ * Use the {@link PortfolioChildren#newInstance} factory method to
  * create an instance of this fragment.
  */
 public class Portfolio extends Fragment {

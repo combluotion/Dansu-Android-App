@@ -182,5 +182,13 @@
     <string name="title_activity_darse_baja">DarseBaja</string>
 
     <string name="inscrito_exito">¡Enhorabuena te has inscrito a la oferta! </string>
+    <string name="title_activity_editar_biografia">EditarBiografia</string>
+    <string name="title_activity_editar_educacion">EditarEducacion</string>
+
+    <!-- PORTFOLIO -->
+
+    <string name="PortfolioFollow">seguidos</string>
+    <string name="PortfolioFollowers">seguidores</string>
+
 
 </resources>

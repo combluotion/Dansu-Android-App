@@ -21,14 +21,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <activity android:name=".Precarga.SplashArt">
-
-        </activity>
-
-        <activity android:name=".Main2Activity">
-
-        </activity>
+        <activity android:name=".Precarga.SplashArt" />
+        <activity android:name=".Main2Activity" />
         <activity android:name=".crop" />
         <activity android:name=".Login.LoginPage" />
         <activity
@@ -56,12 +50,9 @@
 
         <activity
             android:name=".MapsActivity"
-            android:label="@string/title_activity_maps">
-
-        </activity>
+            android:label="@string/title_activity_maps" />
         <activity android:name=".Login.RecuperarPass" />
-        <activity android:name=".Login.Bifurcacion" >
-        </activity>
+        <activity android:name=".Login.Bifurcacion" />
         <activity
             android:name=".NavigationChildren.BuscarCasting"
             android:label="@string/title_activity_buscar_casting"
@@ -128,7 +119,25 @@
         <activity
             android:name=".NavigationChildren.DarseBaja"
             android:label="@string/title_activity_darse_baja"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Navigation.PortfolioChildren.EditarBiografia"
+            android:label="@string/title_activity_editar_biografia"
+            android:parentActivityName=".Navigation.Navigation"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.elamoreslomasgrande.volley1.Navigation.Navigation" />
+        </activity>
+        <activity
+            android:name=".Navigation.PortfolioChildren.EditarEducacion"
+            android:label="@string/title_activity_editar_educacion"
+            android:parentActivityName=".Navigation.Navigation"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.elamoreslomasgrande.volley1.Navigation.Navigation" />
+        </activity>
     </application>
 
 </manifest>
