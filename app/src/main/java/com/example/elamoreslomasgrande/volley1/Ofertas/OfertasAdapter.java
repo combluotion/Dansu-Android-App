@@ -2,36 +2,17 @@ package com.example.elamoreslomasgrande.volley1.Ofertas;
 
 import android.content.Context;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.media.Image;
-import android.net.Uri;
-import android.os.Build;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.elamoreslomasgrande.volley1.PabloAPI;
 import com.example.elamoreslomasgrande.volley1.R;
-import com.example.elamoreslomasgrande.volley1.RetrofitService;
 import com.squareup.picasso.Picasso;
 
-import java.io.BufferedInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.URL;
-import java.net.URLConnection;
 import java.util.List;
-
-import okhttp3.ResponseBody;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-
-import static android.content.ContentValues.TAG;
 
 /**
  * Created by elamoreslomasgrande on 13/11/2017.
@@ -72,7 +53,11 @@ public class OfertasAdapter extends RecyclerView.Adapter<OfertasAdapter.MyViewHo
         viewHolder.title.setText(ofertaList.get(i).getTitulo());
         String vote = ofertaList.get(i).getDescripcion();
         String url = ofertaList.get(i).getFotoportada();
+        String location = ofertaList.get(i).getDireccion();
+
         viewHolder.userrating.setText(vote);
+        viewHolder.lugar.setText(location);
+
         Picasso.with(this.mContext).load("http://46.105.28.25:3020/images/"+url).into(viewHolder.castingimg);
 
 
@@ -86,7 +71,7 @@ public class OfertasAdapter extends RecyclerView.Adapter<OfertasAdapter.MyViewHo
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder{
-        public TextView title, userrating;
+        public TextView title, userrating, lugar;
         public ImageView castingimg;
 
 
@@ -94,7 +79,8 @@ public class OfertasAdapter extends RecyclerView.Adapter<OfertasAdapter.MyViewHo
             super(view);
             title = (TextView) view.findViewById(R.id.title);
             userrating = (TextView) view.findViewById(R.id.userrating);
-            castingimg = (ImageView) view.findViewById(R.id.bbb);
+            castingimg = (ImageView) view.findViewById(R.id.imagenCasting);
+            lugar = view.findViewById(R.id.location);
 
 
         }

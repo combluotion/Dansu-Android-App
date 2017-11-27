@@ -22,7 +22,7 @@
 
 
             <ImageView
-                android:id="@+id/bbb"
+                android:id="@+id/imagenCasting"
                 android:layout_width="328dp"
                 android:layout_height="102dp"
                 android:layout_gravity="center"
@@ -71,7 +71,7 @@
                     android:background="@color/backgroundToolBar"/>
 
                 <TextView
-                    android:id="@+id/Location"
+                    android:id="@+id/location"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="16sp"
