@@ -10,6 +10,7 @@ import okhttp3.RequestBody;
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.http.Field;
+import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.Headers;
 import retrofit2.http.Multipart;
 import retrofit2.http.POST;
@@ -28,10 +29,11 @@ public interface PabloAPI {
     @POST("oferta/cargar")
     Call<ArrayList<Oferta>> getOfertas();
 
-    @Headers("Content-Type: application/json")
+    @FormUrlEncoded
+   // @Headers("Content-Type: application/json")
     @POST("oferta/misofertas")
     Call<ArrayList<Oferta>> getMisOfertas(
-            @Field("id") int id_usuario
+            @Field("id") int id
     );
 
     @Headers("Content-Type: application/json")

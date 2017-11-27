@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Volley1</string>
+    <string name="app_name">Dansu</string>
 
 
     <string name="title_activity_navigation_test">Retraso</string>
@@ -10,7 +10,7 @@
     <string name="option_home_setting">Settings</string>
     <string name="title_activity_home_app">home_app</string>
     <string name="title_activity_maps">Map</string>
-    <string name="title_activity_navigation">Navigation</string>
+    <string name="title_activity_navigation">Dansu</string>  <!-- Nombre de la app  -->
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -193,5 +193,11 @@
     <string name="action_settings">Settings</string>
     <string name="section_format">Hello World from section: %1$d</string>
 
+
+
+    <!-- TAB HOME -->
+
+    <string name="Home_Tab1">Castings</string>
+    <string name="Home_Tab2">Publicaciones</string>
 
 </resources>
