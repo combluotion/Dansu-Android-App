@@ -99,6 +99,7 @@ public class Feed extends Fragment {
             }
         });
         return Lay;
+
     }
 
     // TODO: Rename method, update argument and hook method into UI event
