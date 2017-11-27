@@ -10,9 +10,9 @@
         <item name="tabTextColor">@color/colorAccent</item>
     </style>
 
-<<<<<<< HEAD
+
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
-=======
+
     <style name="MyButton" parent="Widget.AppCompat.Button">
         <item name="android:textAllCaps">false</item>
         <item name="background">@color/colorAccent</item>
@@ -20,8 +20,7 @@
     </style>
 
 
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
->>>>>>> f7f67df85978ec0de7871e8b399987165c04c16f
+
 
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />

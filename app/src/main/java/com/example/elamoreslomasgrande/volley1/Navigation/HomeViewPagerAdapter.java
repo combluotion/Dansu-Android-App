@@ -29,13 +29,13 @@ public class HomeViewPagerAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         switch (position) {
             case FRAGMENT_A_INDEX:
-                return Home.newInstance("Home","home");
+                return Home.newInstance("home","home");
             case FRAGMENT_B_INDEX:
                 return Dashboard.newInstance("Dashboard","dashboard");
             case FRAGMENT_C_INDEX:
-                return Notificaciones.newInstance("Notificaciones","notificaciones");
+                return Notificaciones.newInstance("notificaciones","notificaciones");
             case FRAGMENT_D_INDEX:
-                return Portfolio.newInstance("Notificaciones","notificaciones");
+                return Portfolio.newInstance("notificaciones","notificaciones");
             default:
                 return null;
         }

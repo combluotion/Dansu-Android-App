@@ -27,7 +27,7 @@
                 android:layout_height="102dp"
                 android:layout_gravity="center"
                 android:layout_marginBottom="16dp"
-                android:src="@drawable/silent"
+
                 />
 
             <TextView

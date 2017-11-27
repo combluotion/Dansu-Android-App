@@ -1,5 +1,6 @@
 package com.example.elamoreslomasgrande.volley1.Navigation;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.ColorInt;
 import android.support.annotation.NonNull;
@@ -25,7 +26,7 @@ import java.lang.reflect.Field;
 
 public class Navigation extends FragmentActivity{
     HomeViewPagerAdapter homeTabsAdapter = new HomeViewPagerAdapter(getSupportFragmentManager());
-
+    BottomNavigationView navigation;
     LockableViewPager vp;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
@@ -36,9 +37,11 @@ public class Navigation extends FragmentActivity{
             switch (item.getItemId()) {
                 case R.id.navigation_home:
                     vp.setCurrentItem(HomeViewPagerAdapter.FRAGMENT_A_INDEX, false);
+                  //  navigation.getMenu().findItem(R.id.navigation_home).setIcon(R.drawable.ic_home_push);
                     return true;
                 case R.id.navigation_dashboard:
                     vp.setCurrentItem(HomeViewPagerAdapter.FRAGMENT_B_INDEX, false);
+                   // navigation.getMenu().findItem(R.id.navigation_home).setIcon(R.drawable.ic_home_push);
                     return true;
                 case R.id.navigation_notifications:
                     vp.setCurrentItem(HomeViewPagerAdapter.FRAGMENT_C_INDEX, false);
@@ -51,6 +54,8 @@ public class Navigation extends FragmentActivity{
         }
     };
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,7 +65,9 @@ public class Navigation extends FragmentActivity{
         vp.setAdapter(homeTabsAdapter);
         vp.setSwipeable(false);
 
-        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
+        navigation = (BottomNavigationView) findViewById(R.id.navigation);
+        navigation.setItemIconTintList(null);
+
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
     }
