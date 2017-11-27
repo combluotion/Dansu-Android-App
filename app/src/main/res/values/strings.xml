@@ -10,7 +10,7 @@
     <string name="option_home_setting">Settings</string>
     <string name="title_activity_home_app">home_app</string>
     <string name="title_activity_maps">Map</string>
-    <string name="title_activity_navigation">Navigation</string>
+    <string name="title_activity_navigation">Dansu</string>  <!-- Nombre de la app  -->
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

@@ -5,7 +5,7 @@
         <!-- Customize your theme here. -->
         <item name="buttonStyle">@style/MyButton</item>
         <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryDark">@color/colorAccent</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="tabTextColor">@color/colorAccent</item>
     </style>
