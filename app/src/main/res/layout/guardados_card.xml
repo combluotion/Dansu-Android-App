@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    android:padding="14dp"
+    android:orientation="vertical">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="102dp"
+        android:background="#d8d8d8"/>
+    <TextView
+        android:layout_width="328dp"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif-medium"
+        android:textStyle="normal"
+        android:textColor="#000000"
+        android:letterSpacing="0.03"
+        android:text="Animador/a para hotel"
+        android:layout_marginTop="16dp"/>
+    <TextView
+        android:layout_width="328dp"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif"
+        android:textStyle="normal"
+        android:textColor="#000000"
+        android:letterSpacing="0.03"
+        android:text="Hotel Miramar"
+        android:layout_marginTop="8dp"/>
+    <TextView
+        android:layout_width="328dp"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif"
+        android:textStyle="normal"
+        android:textColor="#000000"
+        android:paddingLeft="5dp"
+        android:drawablePadding="7dp"
+        android:drawableLeft="@drawable/iconofalso"
+        android:letterSpacing="0.03"
+        android:text="Gran Vía, Madrid"
+        android:layout_marginTop="8dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp">
+        <TextView
+            android:layout_width="122dp"
+            android:layout_height="36dp"
+            android:background="#33999999"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-medium"
+            android:textStyle="normal"
+            android:textColor="#000000"
+            android:letterSpacing="0.04"
+            android:textAlignment="center"
+            android:paddingVertical="8dp"
+            android:text="Activo"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:fontFamily="sans-serif"
+            android:textStyle="normal"
+            android:textColor="#000000"
+            android:letterSpacing="0.03"
+            android:layout_marginHorizontal="14dp"
+            android:text="Quedan  5d | 20h | 30m"/>
+        <ImageView
+            android:layout_width="14dp"
+            android:layout_height="18dp"
+            android:background="#5a5a5a"
+            android:layout_gravity="center_vertical"/>
+    </LinearLayout>
+</LinearLayout>

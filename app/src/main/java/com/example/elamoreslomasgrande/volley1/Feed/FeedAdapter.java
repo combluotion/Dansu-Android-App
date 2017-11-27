@@ -31,7 +31,7 @@ public class FeedAdapter extends RecyclerView.Adapter<FeedAdapter.MyViewHolder> 
     @Override
     public FeedAdapter.MyViewHolder onCreateViewHolder(ViewGroup viewGroup, int i){
         View view = LayoutInflater.from(viewGroup.getContext())
-                .inflate(R.layout.oferta_card, viewGroup, false);
+                .inflate(R.layout.publicacion_card, viewGroup, false);
 
         return new MyViewHolder(view);
 

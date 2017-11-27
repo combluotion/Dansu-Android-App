@@ -189,7 +189,7 @@ public class LoginPage extends AppCompatActivity implements GoogleApiClient.Conn
             Intent intento = new Intent(this, Navigation.class);
             startActivity(intento);
         }else{
-            //Toast.makeText(this, "Error en el Login",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Error en el Login",Toast.LENGTH_SHORT).show();
         }
     }
 }

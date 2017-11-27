@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Volley1</string>
+    <string name="app_name">Dansu</string>
 
 
     <string name="title_activity_navigation_test">Retraso</string>
@@ -180,5 +180,13 @@
     <string name="title_activity_centro_ayuda">CentroAyuda</string>
     <string name="title_activity_cerrar_sesion">CerrarSesion</string>
     <string name="title_activity_darse_baja">DarseBaja</string>
+
+    <string name="inscrito_exito">¡Enhorabuena te has inscrito a la oferta! </string>
+
+
+    <!-- TAB HOME -->
+
+    <string name="Home_Tab1">Castings</string>
+    <string name="Home_Tab2">Publicaciones</string>
 
 </resources>

@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.elamoreslomasgrande.volley1.Navigation.Guardados.Inscritas.Inscritas;
 import com.example.elamoreslomasgrande.volley1.Navigation.Home.Castings;
 import com.example.elamoreslomasgrande.volley1.Navigation.Notificaciones;
 import com.example.elamoreslomasgrande.volley1.R;
@@ -76,10 +77,10 @@ public class Dashboard extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         mTabHost = new FragmentTabHost(getActivity());
-        mTabHost.setup(getActivity(), getChildFragmentManager(), R.id.fragment1);
+        mTabHost.setup(getActivity(), getChildFragmentManager(), R.id.fragment2);
 
         mTabHost.addTab(mTabHost.newTabSpec("inscritas").setIndicator("Inscritas"),
-                Notificaciones.class, null);
+                Inscritas.class, null);
         mTabHost.addTab(mTabHost.newTabSpec("guardadas").setIndicator("Guardadas"),
                 Notificaciones.class, null);
         mTabHost.addTab(mTabHost.newTabSpec("mensajes").setIndicator("Mensajes"),

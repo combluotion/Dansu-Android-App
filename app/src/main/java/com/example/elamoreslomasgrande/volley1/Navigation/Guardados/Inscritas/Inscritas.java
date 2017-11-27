@@ -89,7 +89,7 @@ public class Inscritas extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         FrameLayout Lay =(FrameLayout) inflater.inflate(R.layout.fragment_inscritas, container, false);
-        swipeContainer = (SwipeRefreshLayout) Lay.findViewById(R.id.main_content);
+       /* swipeContainer = (SwipeRefreshLayout) Lay.findViewById(R.id.main_content);
         swipeContainer.setColorSchemeResources(android.R.color.holo_orange_dark);
         loadJSON();
         swipeContainer.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener(){
@@ -98,7 +98,7 @@ public class Inscritas extends Fragment {
                 loadJSON();
                 Toast.makeText(getContext(), "¡Baila!", Toast.LENGTH_SHORT).show();
             }
-        });
+        });*/
         return Lay;}
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -143,7 +143,7 @@ public class Inscritas extends Fragment {
     private void loadJSON(){
         RetrofitService retrofitService = RetrofitService.getInstance();
         PabloAPI api = retrofitService.getApiProxyServer();
-        Call<ArrayList<Oferta>> call = api.getMisOfertas();
+        Call<ArrayList<Oferta>> call = api.getMisOfertas(1);
         call.enqueue(new Callback<ArrayList<Oferta>>() {
             @Override
             public void onResponse(Call<ArrayList<Oferta>> call, Response<ArrayList<Oferta>> response) {

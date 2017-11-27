@@ -1,0 +1,46 @@
+<android.support.v7.widget.Toolbar xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/toolbar5"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@color/backgroundToolBar"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_margin="16dp">
+            <ImageButton
+                android:id="@+id/imageButtonOptions"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/circle"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:fontFamily="sans-serif-medium"
+                android:textStyle="normal"
+                android:layout_weight="1"
+                android:textColor="#ffffff"
+                android:letterSpacing="0.03"
+                android:text="@string/app_name"
+                android:textAlignment="center"
+                />
+
+            <ImageButton
+                android:id="@+id/imageButtonSearch"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/circle"
+                />
+        </LinearLayout>
+
+
+
+</android.support.v7.widget.Toolbar>
