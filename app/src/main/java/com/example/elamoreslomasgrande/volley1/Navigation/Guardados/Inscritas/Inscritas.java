@@ -89,7 +89,7 @@ public class Inscritas extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         FrameLayout Lay =(FrameLayout) inflater.inflate(R.layout.fragment_inscritas, container, false);
-       /* swipeContainer = (SwipeRefreshLayout) Lay.findViewById(R.id.main_content);
+        swipeContainer = (SwipeRefreshLayout) Lay.findViewById(R.id.main_content);
         swipeContainer.setColorSchemeResources(android.R.color.holo_orange_dark);
         loadJSON();
         swipeContainer.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener(){
@@ -98,7 +98,7 @@ public class Inscritas extends Fragment {
                 loadJSON();
                 Toast.makeText(getContext(), "¡Baila!", Toast.LENGTH_SHORT).show();
             }
-        });*/
+        });
         return Lay;}
 
     // TODO: Rename method, update argument and hook method into UI event
