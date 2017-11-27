@@ -189,6 +189,9 @@
 
     <string name="PortfolioFollow">seguidos</string>
     <string name="PortfolioFollowers">seguidores</string>
+    <string name="title_activity_porfolio_tabs">PorfolioTabs</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
 
 
 </resources>
