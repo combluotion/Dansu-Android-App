@@ -22,12 +22,12 @@
 
 
             <ImageView
-                android:id="@+id/bbb"
+                android:id="@+id/imagenCasting"
                 android:layout_width="328dp"
                 android:layout_height="102dp"
                 android:layout_gravity="center"
                 android:layout_marginBottom="16dp"
-                android:src="@drawable/silent"
+
                 />
 
             <TextView
@@ -71,7 +71,8 @@
                     android:background="@color/backgroundToolBar"/>
 
                 <TextView
-                    android:id="@+id/Location"
+                    android:layout_marginLeft="7dp"
+                    android:id="@+id/location"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="16sp"
@@ -123,7 +124,7 @@
 
                 <CheckBox android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:button="@drawable/loveimage"
+                    android:button="@drawable/selector_guardar"
                     android:layout_gravity="center_vertical"
                     android:clickable="true"
                     />

@@ -35,7 +35,7 @@
         app:menu="@menu/navigation"
         android:layout_weight="1"
         app:itemTextColor="@color/backgroundToolBar"
-        app:itemIconTint="@color/backgroundToolBar"/>
+        />
 </LinearLayout>
 
 

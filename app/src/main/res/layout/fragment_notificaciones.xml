@@ -8,6 +8,6 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="¡Hola! \n Este espacio no está disponible en el prototipo actual, esto puede ser debido a: \n *1 Todo lo que ves ha sido desarrollado en poco más de un mes por 3 estudiantes y está aún en proceso \n *2 Es una sección que no sería del todo funcional para mostrar en un prototipo \n *3 Nuestra aplicación ha generado una inteligencia artificial increiblemente fuerte la cual ya es incontrolable y va a destruir el mundo " />
+        android:text="¡Hola! \n Este espacio no está disponible en el prototipo actual, esto puede ser debido a: \n *1 Todo lo que ves ha sido desarrollado en poco más de un mes por 6 estudiantes y está aún en proceso \n *2 Es una sección que no sería del todo funcional para mostrar en un prototipo \n *3 Nuestra aplicación ha generado una inteligencia artificial increiblemente fuerte la cual ya es incontrolable y va a destruir el mundo " />
 
 </FrameLayout>

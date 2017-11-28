@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.elamoreslomasgrande.volley1.Navigation.Guardados.Guardadas.Guardadas;
 import com.example.elamoreslomasgrande.volley1.Navigation.Guardados.Inscritas.Inscritas;
 import com.example.elamoreslomasgrande.volley1.Navigation.Home.Castings;
 import com.example.elamoreslomasgrande.volley1.Navigation.Notificaciones;
@@ -82,7 +83,7 @@ public class Dashboard extends Fragment {
         mTabHost.addTab(mTabHost.newTabSpec("inscritas").setIndicator("Inscritas"),
                 Inscritas.class, null);
         mTabHost.addTab(mTabHost.newTabSpec("guardadas").setIndicator("Guardadas"),
-                Notificaciones.class, null);
+                Guardadas.class, null);
         mTabHost.addTab(mTabHost.newTabSpec("mensajes").setIndicator("Mensajes"),
                 Notificaciones.class, null);
         return mTabHost;

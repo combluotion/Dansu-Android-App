@@ -10,144 +10,176 @@
     android:layout_height="match_parent">
 
 
+<<<<<<< HEAD
 <RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
     <LinearLayout
+=======
+    <ScrollView
+>>>>>>> a58906c250bcff49ddbedbc6696f4e4256616cef
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="90dp"
-        tools:layout_editor_absoluteY="0dp">
+        android:layout_height="match_parent">
 
-        <ImageView
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="203dp"
-            android:background="#9b9b9b" />
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:paddingHorizontal="16dp"
-            android:layout_marginTop="12dp">
-            <TextView
-                android:layout_width="66dp"
-                android:layout_height="wrap_content"
-                android:textAlignment="center"
-                android:textSize="14sp"
-                android:fontFamily="sans-serif-light"
-                android:textStyle="normal"
-                android:textColor="#4a4a4a"
-                android:letterSpacing="0.03"
-                android:text="22"/>
-            <TextView
-                android:layout_width="66dp"
-                android:layout_height="wrap_content"
-                android:textAlignment="center"
-                android:textSize="14sp"
-                android:fontFamily="sans-serif-light"
-                android:textStyle="normal"
-                android:textColor="#4a4a4a"
-                android:letterSpacing="0.03"
-                android:text="86"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:paddingHorizontal="16dp">
-            <TextView
-                android:layout_width="66dp"
-                android:layout_height="wrap_content"
-                android:textSize="10sp"
-                android:textAlignment="center"
-                android:fontFamily="sans-serif"
-                android:textStyle="normal"
-                android:textColor="#4a4a4a"
-                android:letterSpacing="0.03"
-                android:text="@string/PortfolioFollow"/>
-            <TextView
-                android:layout_width="66dp"
-                android:layout_height="wrap_content"
-                android:textSize="10sp"
-                android:textAlignment="center"
-                android:fontFamily="sans-serif"
-                android:textStyle="normal"
-                android:textColor="#4a4a4a"
-                android:letterSpacing="0.03"
-                android:text="@string/PortfolioFollowers"/>
-        </LinearLayout>
-
-        <TextView
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="14dp"
-            android:fontFamily="sans-serif-medium"
             android:gravity="center_horizontal"
-            android:letterSpacing="0.03"
-            android:text="MariaPerez"
-            android:textColor="#000000"
-            android:textSize="16sp"
-            android:textStyle="normal" />
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="90dp"
+            tools:layout_editor_absoluteY="0dp">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="16dp"
-            android:fontFamily="sans-serif"
-            android:gravity="center_horizontal"
-            android:letterSpacing="0.03"
-            android:paddingHorizontal="16dp"
-            android:text="Soy bailarina de baile profesional. Bailo ballet y hip-hop lo que representa mi alma. Siempre hay que luchar por tus sueños."
-            android:textColor="#000000"
-            android:textSize="15sp"
-            android:textStyle="normal" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="203dp"
+                android:background="#9b9b9b" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="22dp"
-            android:drawableLeft="@drawable/iconofalso"
-            android:drawablePadding="7dp"
-            android:fontFamily="sans-serif"
-            android:letterSpacing="0.03"
-            android:paddingLeft="5dp"
-            android:text="Madrid"
-            android:textColor="#000000"
-            android:textSize="15sp"
-            android:textStyle="normal" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal"
+                android:paddingHorizontal="16dp">
 
+                <TextView
+                    android:layout_width="66dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:letterSpacing="0.03"
+                    android:text="22"
+                    android:textAlignment="center"
+                    android:textColor="#4a4a4a"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:layout_width="66dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:letterSpacing="0.03"
+                    android:text="86"
+                    android:textAlignment="center"
+                    android:textColor="#4a4a4a"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingHorizontal="16dp">
+
+                <TextView
+                    android:layout_width="66dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:letterSpacing="0.03"
+                    android:text="@string/PortfolioFollow"
+                    android:textAlignment="center"
+                    android:textColor="#4a4a4a"
+                    android:textSize="10sp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:layout_width="66dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:letterSpacing="0.03"
+                    android:text="@string/PortfolioFollowers"
+                    android:textAlignment="center"
+                    android:textColor="#4a4a4a"
+                    android:textSize="10sp"
+                    android:textStyle="normal" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center_horizontal"
+                android:letterSpacing="0.03"
+                android:text="MariaPerez"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="16dp"
+                android:fontFamily="sans-serif"
+                android:gravity="center_horizontal"
+                android:letterSpacing="0.03"
+                android:paddingHorizontal="16dp"
+                android:text="Soy bailarina de baile profesional. Bailo ballet y hip-hop lo que representa mi alma. Siempre hay que luchar por tus sueños."
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="22dp"
+                android:drawableLeft="@drawable/iconofalso"
+                android:drawablePadding="7dp"
+                android:fontFamily="sans-serif"
+                android:letterSpacing="0.03"
+                android:paddingLeft="5dp"
+                android:text="Madrid"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:textStyle="normal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <include layout="@layout/content_notificaciones_conf" />
+            </LinearLayout>
+
+<<<<<<< HEAD
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
              <include layout="@layout/content_notificaciones_conf"/>
+=======
+>>>>>>> a58906c250bcff49ddbedbc6696f4e4256616cef
         </LinearLayout>
 
-    </LinearLayout>
+            <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="match_parent"
+            android:layout_height="97dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="142dp"
+            android:layout_weight="1"
+            android:src="@drawable/circle"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="151dp" />
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="match_parent"
-        android:layout_height="97dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="142dp"
-        android:layout_weight="1"
-        android:src="@drawable/circle"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="151dp" />
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_alignBottom="@+id/imageView3"
+                android:layout_alignParentEnd="true"
+                android:layout_marginBottom="17dp"
+                android:layout_marginEnd="24dp"
+                android:src="@drawable/circle" />
+        </RelativeLayout>
 
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="36dp"
-        android:layout_height="36dp"
-        android:layout_alignBottom="@+id/imageView3"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="17dp"
-        android:layout_marginEnd="24dp"
-        android:src="@drawable/circle" />
+    </ScrollView>
+
+
 
 
 </RelativeLayout>

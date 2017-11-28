@@ -1,5 +1,6 @@
 package com.example.elamoreslomasgrande.volley1.Navigation;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.ColorInt;
 import android.support.annotation.NonNull;
@@ -25,7 +26,7 @@ import java.lang.reflect.Field;
 
 public class Navigation extends FragmentActivity{
     HomeViewPagerAdapter homeTabsAdapter = new HomeViewPagerAdapter(getSupportFragmentManager());
-
+    BottomNavigationView navigation;
     LockableViewPager vp;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
@@ -36,20 +37,30 @@ public class Navigation extends FragmentActivity{
             switch (item.getItemId()) {
                 case R.id.navigation_home:
                     vp.setCurrentItem(HomeViewPagerAdapter.FRAGMENT_A_INDEX, false);
+                    bye();
+                    navigation.getMenu().findItem(R.id.navigation_home).setIcon(R.drawable.ic_home_push);
                     return true;
                 case R.id.navigation_dashboard:
                     vp.setCurrentItem(HomeViewPagerAdapter.FRAGMENT_B_INDEX, false);
+                    bye();
+                    navigation.getMenu().findItem(R.id.navigation_dashboard).setIcon(R.drawable.ic_mis_candidaturas_push);
                     return true;
                 case R.id.navigation_notifications:
                     vp.setCurrentItem(HomeViewPagerAdapter.FRAGMENT_C_INDEX, false);
+                    bye();
+                    navigation.getMenu().findItem(R.id.navigation_notifications).setIcon(R.drawable.ic_notificaciones_push);
                     return true;
                 case R.id.navigation_portfolio:
                     vp.setCurrentItem(HomeViewPagerAdapter.FRAGMENT_D_INDEX, false);
+                    bye();
+                    navigation.getMenu().findItem(R.id.navigation_portfolio).setIcon(R.drawable.ic_perfil_push);
                     return true;
             }
             return false;
         }
     };
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,8 +71,17 @@ public class Navigation extends FragmentActivity{
         vp.setAdapter(homeTabsAdapter);
         vp.setSwipeable(false);
 
-        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
+        navigation = (BottomNavigationView) findViewById(R.id.navigation);
+        navigation.setItemIconTintList(null);
+
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
+    }
+
+    private void bye(){
+        navigation.getMenu().findItem(R.id.navigation_home).setIcon(R.drawable.ic_home);
+        navigation.getMenu().findItem(R.id.navigation_dashboard).setIcon(R.drawable.ic_mis_candidaturas);
+        navigation.getMenu().findItem(R.id.navigation_notifications).setIcon(R.drawable.ic_notificaciones);
+        navigation.getMenu().findItem(R.id.navigation_portfolio).setIcon(R.drawable.ic_perfil);
     }
 }
