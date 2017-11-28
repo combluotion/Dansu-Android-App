@@ -55,8 +55,10 @@ public interface PabloAPI {
     ); */
 
 
- @GET
-    Call<ResponseBody> getNotificationImage(
-         @Url String url
- );
+    @FormUrlEncoded
+    // @Headers("Content-Type: application/json")
+    @POST("oferta/guardadas")
+    Call<ArrayList<Oferta>> getGuardadas(
+            @Field("id") int id
+    );
 }
