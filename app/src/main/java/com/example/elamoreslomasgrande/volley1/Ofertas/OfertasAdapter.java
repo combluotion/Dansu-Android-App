@@ -143,7 +143,7 @@ public class OfertasAdapter extends RecyclerView.Adapter<OfertasAdapter.MyViewHo
         RetrofitService retrofitService = RetrofitService.getInstance();
         PabloAPI api = retrofitService.getApiProxyServer();
 
-       ArrayList<Observable<?>> requests = new ArrayList<>();
+      /* ArrayList<Observable<?>> requests = new ArrayList<>();
 
        requests.add(api.getGuardadax(1));
         Observable.zip(
@@ -175,9 +175,9 @@ public class OfertasAdapter extends RecyclerView.Adapter<OfertasAdapter.MyViewHo
                                 //Do something on error completion of requests
                             }
                         }
-                );
+                ); */
 
-        /* Call<ArrayList<Oferta>> call = api.getGuardadas(1);
+         Call<ArrayList<Oferta>> call = api.getGuardadas(1);
         call.enqueue(new Callback<ArrayList<Oferta>>() {
             @Override
             public void onResponse(Call<ArrayList<Oferta>> call, Response<ArrayList<Oferta>> response) {
@@ -194,7 +194,7 @@ public class OfertasAdapter extends RecyclerView.Adapter<OfertasAdapter.MyViewHo
                 Log.d("traza", "por alla");
                 Log.d("traza", t.toString());
             }
-        }); */
+        });
 
 
 
