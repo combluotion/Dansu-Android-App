@@ -7,6 +7,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -74,39 +75,11 @@ public class OfertasAdapter extends RecyclerView.Adapter<OfertasAdapter.MyViewHo
             e.printStackTrace();
         }
         long tiempo = fecha_oferta.getTime()-fecha_actual.getTime();
-        if (tiempo > 0){
-            long segs = tiempo/1000;
 
-            int mDays = (int) (segs/86400);
-            segs = segs-(mDays*86400);
-            int mHours = (int) (segs/3600);
-            segs = segs -(mHours*3600);
-            int mMin = (int) (segs/60);
-            segs = segs -(mMin*60);
-
-            viewHolder.fecha.setText(String.valueOf(mDays+"/"+mHours+"/"+mMin+"/"+segs));
-        }else{
-            viewHolder.fecha.setText("Ha expirado");
-        }
+        Contador contador = new Contador(tiempo,1000, viewHolder.fecha,viewHolder.ofertaEstado);
+        contador.start();
 
 
-        /*
-        *  new CountDownTimer(30000, 1000) {
-
-             public void onTick(long millisUntilFinished) {
-                 mTextField.setText("seconds remaining: " + millisUntilFinished / 1000);
-             }
-
-             public void onFinish() {
-                 mTextField.setText("done!");
-             }
-          }.start();
-        */
-        //Contador timer = new Contador(formatter.format(time), 1000,viewHolder.fecha);
-        //timer.onTick(1000);
-
-
-        //viewHolder.fecha.setText(time);
         viewHolder.userrating.setText(vote);
         viewHolder.lugar.setText(location);
 
@@ -132,6 +105,7 @@ public class OfertasAdapter extends RecyclerView.Adapter<OfertasAdapter.MyViewHo
     public class MyViewHolder extends RecyclerView.ViewHolder{
         public TextView title, userrating, lugar, fecha;
         public ImageView castingimg;
+        public Button ofertaEstado;
 
 
         public MyViewHolder(View view){
@@ -141,7 +115,7 @@ public class OfertasAdapter extends RecyclerView.Adapter<OfertasAdapter.MyViewHo
             castingimg = (ImageView) view.findViewById(R.id.imagenCasting);
             lugar = view.findViewById(R.id.location);
             fecha = view.findViewById(R.id.restTime);
-
+            ofertaEstado = view.findViewById(R.id.ofertaEstado);
 
 
         }

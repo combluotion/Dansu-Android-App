@@ -100,7 +100,7 @@
                     android:layout_marginTop="-5dip"
                     android:layout_marginBottom="-5dip"
 
-                    android:id="@+id/ccc"
+                    android:id="@+id/ofertaEstado"
                     android:layout_width="122dp"
                     android:layout_height="36dp"
                     android:backgroundTint="@color/backgroundToolBar"
@@ -117,6 +117,8 @@
                     android:id="@+id/restTime"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textStyle="normal"
+                    android:textColor="#000000"
                     android:layout_weight="1"
                     android:layout_gravity="center_vertical"
                     android:text="TextView"
