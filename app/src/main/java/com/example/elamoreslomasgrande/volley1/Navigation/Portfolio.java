@@ -7,9 +7,10 @@ import android.support.v4.app.FragmentTabHost;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.RelativeLayout;
 
 import com.example.elamoreslomasgrande.volley1.Navigation.Guardados.Inscritas.Inscritas;
+import com.example.elamoreslomasgrande.volley1.Navigation.PortfolioChildren.PortfolioCV;
+import com.example.elamoreslomasgrande.volley1.Navigation.PortfolioChildren.PortfolioGaleria;
 import com.example.elamoreslomasgrande.volley1.R;
 
 /**
@@ -56,14 +57,7 @@ public class Portfolio extends Fragment {
         return fragment;
     }
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -72,18 +66,22 @@ public class Portfolio extends Fragment {
 
 
 
-       return inflater.inflate(R.layout.fragment_portfolio, container, false);
 
 
-    /*    mTabHost = new FragmentTabHost(getActivity());
-        mTabHost.setup(getActivity(), getChildFragmentManager(), R.id.fragment3);
+        View v =inflater.inflate(R.layout.fragment_portfolio, container, false);
+
+      // mTabHost = new FragmentTabHost(getActivity());
+        mTabHost = v.findViewById(R.id.pp);
+        mTabHost.setup(getActivity(), getChildFragmentManager(), R.id.fragment2);
 
         mTabHost.addTab(mTabHost.newTabSpec("portfolio").setIndicator("Portfolio"),
-                Inscritas.class, null);
+                PortfolioGaleria.class, null);
         mTabHost.addTab(mTabHost.newTabSpec("cv").setIndicator("CV"),
-                Notificaciones.class, null);
+                PortfolioCV.class, null);
 
-        return mTabHost; */
+       // return mTabHost;
+
+return v;
     }
 
 
@@ -125,5 +123,10 @@ public class Portfolio extends Fragment {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
+
+
+
+
+
 
 }
