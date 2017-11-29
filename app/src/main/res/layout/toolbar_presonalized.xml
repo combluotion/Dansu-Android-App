@@ -1,7 +1,8 @@
-<android.support.v7.widget.Toolbar xmlns:tools="http://schemas.android.com/tools"
+<android.support.v7.widget.Toolbar xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/toolbar5"
     android:layout_width="match_parent"
-    android:layout_height="?attr/actionBarSize"
+    android:layout_height="match_parent"
     android:background="@color/backgroundToolBar"
     xmlns:android="http://schemas.android.com/apk/res/android"
     >

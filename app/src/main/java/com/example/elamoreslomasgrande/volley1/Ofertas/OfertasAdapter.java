@@ -3,6 +3,7 @@ package com.example.elamoreslomasgrande.volley1.Ofertas;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,9 @@ import android.widget.TextView;
 import com.example.elamoreslomasgrande.volley1.R;
 import com.squareup.picasso.Picasso;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -54,13 +58,48 @@ public class OfertasAdapter extends RecyclerView.Adapter<OfertasAdapter.MyViewHo
         String vote = ofertaList.get(i).getDescripcion();
         String url = ofertaList.get(i).getFotoportada();
         String location = ofertaList.get(i).getDireccion();
+        String time = ofertaList.get(i).getFechalimite();
+        Date fecha_oferta = null;
 
+       // time = Adaptador(time);
+
+
+
+        SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy hh:mm:ss");
+        try {
+            fecha_oferta = formatter.parse("05-05-2019 01:20:23");
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        /*
+        *  new CountDownTimer(30000, 1000) {
+
+             public void onTick(long millisUntilFinished) {
+                 mTextField.setText("seconds remaining: " + millisUntilFinished / 1000);
+             }
+
+             public void onFinish() {
+                 mTextField.setText("done!");
+             }
+          }.start();
+        */
+
+
+        //viewHolder.fecha.setText(formatter.format(fecha_oferta));
+        viewHolder.fecha.setText(time);
         viewHolder.userrating.setText(vote);
         viewHolder.lugar.setText(location);
 
         Picasso.with(this.mContext).load("http://46.105.28.25:3020/images/"+url).into(viewHolder.castingimg);
 
 
+    }
+    public String Adaptador(String time){
+        int t = time.indexOf("T");
+        String dias = time.substring(0,t);
+        String horas = " "+ time.substring(t+1,time.length()-5);
+
+        return dias.concat(horas);
     }
 
     @Override
@@ -71,7 +110,7 @@ public class OfertasAdapter extends RecyclerView.Adapter<OfertasAdapter.MyViewHo
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder{
-        public TextView title, userrating, lugar;
+        public TextView title, userrating, lugar, fecha;
         public ImageView castingimg;
 
 
@@ -81,6 +120,7 @@ public class OfertasAdapter extends RecyclerView.Adapter<OfertasAdapter.MyViewHo
             userrating = (TextView) view.findViewById(R.id.userrating);
             castingimg = (ImageView) view.findViewById(R.id.imagenCasting);
             lugar = view.findViewById(R.id.location);
+            fecha = view.findViewById(R.id.restTime);
 
 
         }
