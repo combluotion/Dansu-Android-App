@@ -1,14 +1,32 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.elamoreslomasgrande.volley1.Navigation.PortfolioChildren.EditarBiografia">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.elamoreslomasgrande.volley1.Navigation.Portfolio">
 
-    <ScrollView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<LinearLayout
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+    >
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <RelativeLayout
@@ -16,14 +34,11 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -137,53 +152,13 @@
                 android:textSize="15sp"
                 android:textStyle="normal" />
 
-
-            <TabHost
+            <android.support.v4.app.FragmentTabHost
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content"
+                android:id="@+id/pp" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <TabWidget
-                        android:id="@android:id/tabs"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-
-                    <FrameLayout
-                        android:id="@android:id/tabcontent"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <LinearLayout
-                            android:id="@+id/tab1"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical">
-                            <include layout="@layout/content_notificaciones_conf" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:id="@+id/tab2"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical">
-                            <include layout="@layout/content_centro_ayuda" />
-                        </LinearLayout>
-
-                    </FrameLayout>
-                </LinearLayout>
-            </TabHost>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-             <include layout="@layout/content_notificaciones_conf"/>
         </LinearLayout>
-        </LinearLayout>
-            <ImageView
+        <ImageView
             android:id="@+id/imageView3"
             android:layout_width="match_parent"
             android:layout_height="97dp"
@@ -195,23 +170,25 @@
             tools:layout_editor_absoluteX="0dp"
             tools:layout_editor_absoluteY="151dp" />
 
-            <ImageView
-                android:id="@+id/imageView4"
-                android:layout_width="36dp"
-                android:layout_height="36dp"
-                android:layout_alignBottom="@+id/imageView3"
-                android:layout_alignParentEnd="true"
-                android:layout_marginBottom="17dp"
-                android:layout_marginEnd="24dp"
-                android:src="@drawable/circle" />
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignBottom="@+id/imageView3"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="17dp"
+            android:layout_marginEnd="24dp"
+            android:src="@drawable/circle" />
 
-        </RelativeLayout>
+    </RelativeLayout>
 
-    </ScrollView>
 
 
 
 
 </RelativeLayout>
-</ScrollView>
+
+
 </LinearLayout>
+
+    </ScrollView>
