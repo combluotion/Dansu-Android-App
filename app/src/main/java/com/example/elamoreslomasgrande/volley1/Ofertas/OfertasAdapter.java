@@ -2,14 +2,15 @@ package com.example.elamoreslomasgrande.volley1.Ofertas;
 
 import android.content.Context;
 import android.graphics.Bitmap;
+import android.os.CountDownTimer;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.elamoreslomasgrande.volley1.Contador;
 import com.example.elamoreslomasgrande.volley1.R;
 import com.squareup.picasso.Picasso;
 
@@ -60,17 +61,35 @@ public class OfertasAdapter extends RecyclerView.Adapter<OfertasAdapter.MyViewHo
         String location = ofertaList.get(i).getDireccion();
         String time = ofertaList.get(i).getFechalimite();
         Date fecha_oferta = null;
+        Date fecha_actual = null;
+        time = adaptador(time);
 
-       // time = Adaptador(time);
+        //FORMATO DE LA FECHA
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
 
-
-
-        SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy hh:mm:ss");
         try {
-            fecha_oferta = formatter.parse("05-05-2019 01:20:23");
+            fecha_oferta = formatter.parse(time);
+            fecha_actual = new Date();
         } catch (ParseException e) {
             e.printStackTrace();
         }
+        long tiempo = fecha_oferta.getTime()-fecha_actual.getTime();
+        if (tiempo > 0){
+            long segs = tiempo/1000;
+
+            int mDays = (int) (segs/86400);
+            segs = segs-(mDays*86400);
+            int mHours = (int) (segs/3600);
+            segs = segs -(mHours*3600);
+            int mMin = (int) (segs/60);
+            segs = segs -(mMin*60);
+
+            viewHolder.fecha.setText(String.valueOf(mDays+"/"+mHours+"/"+mMin+"/"+segs));
+        }else{
+            viewHolder.fecha.setText("Ha expirado");
+        }
+
+
         /*
         *  new CountDownTimer(30000, 1000) {
 
@@ -83,10 +102,11 @@ public class OfertasAdapter extends RecyclerView.Adapter<OfertasAdapter.MyViewHo
              }
           }.start();
         */
+        //Contador timer = new Contador(formatter.format(time), 1000,viewHolder.fecha);
+        //timer.onTick(1000);
 
 
-        //viewHolder.fecha.setText(formatter.format(fecha_oferta));
-        viewHolder.fecha.setText(time);
+        //viewHolder.fecha.setText(time);
         viewHolder.userrating.setText(vote);
         viewHolder.lugar.setText(location);
 
@@ -94,7 +114,7 @@ public class OfertasAdapter extends RecyclerView.Adapter<OfertasAdapter.MyViewHo
 
 
     }
-    public String Adaptador(String time){
+    public String adaptador(String time){
         int t = time.indexOf("T");
         String dias = time.substring(0,t);
         String horas = " "+ time.substring(t+1,time.length()-5);
@@ -121,6 +141,7 @@ public class OfertasAdapter extends RecyclerView.Adapter<OfertasAdapter.MyViewHo
             castingimg = (ImageView) view.findViewById(R.id.imagenCasting);
             lugar = view.findViewById(R.id.location);
             fecha = view.findViewById(R.id.restTime);
+
 
 
         }
@@ -155,5 +176,7 @@ public class OfertasAdapter extends RecyclerView.Adapter<OfertasAdapter.MyViewHo
 
 
     } */
+
+
 
 }
