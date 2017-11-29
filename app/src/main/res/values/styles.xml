@@ -18,13 +18,5 @@
         <item name="background">@color/colorAccent</item>
         <item name="android:textColor">@color/white</item>
     </style>
-
-
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> a58906c250bcff49ddbedbc6696f4e4256616cef
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>
