@@ -182,13 +182,8 @@ android:orientation="vertical"
 
     </RelativeLayout>
 
-
-
-
-
 </RelativeLayout>
-
 
 </LinearLayout>
 
-    </ScrollView>
+</ScrollView>
