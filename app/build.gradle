@@ -48,6 +48,8 @@ dependencies {
     compile "com.android.support:design:26.1.0"
     //PICASSO
     compile 'com.squareup.picasso:picasso:2.5.2'
+    //REACT JAVA
+    compile 'io.reactivex.rxjava2:rxjava:2.1.7'
 
     compile 'com.android.support:support-vector-drawable:26.1.0'
     testCompile 'junit:junit:4.12'

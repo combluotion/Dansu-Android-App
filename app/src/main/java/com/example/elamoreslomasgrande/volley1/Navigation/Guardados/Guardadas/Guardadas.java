@@ -47,7 +47,7 @@ public class Guardadas extends Fragment {
 
     private RecyclerView recyclerView;
     private OfertasAdapter adapter;
-    private List<Oferta> ofertas;
+    List<Oferta> ofertas;
     private SwipeRefreshLayout swipeContainer;
     public static final String LOG_TAG = OfertasAdapter.class.getName();
 
@@ -141,7 +141,7 @@ public class Guardadas extends Fragment {
         void onFragmentInteraction(Uri uri);
     }
 
-        private void loadJSON(){
+        public void loadJSON(){
             RetrofitService retrofitService = RetrofitService.getInstance();
             PabloAPI api = retrofitService.getApiProxyServer();
             Call<ArrayList<Oferta>> call = api.getGuardadas(1);
@@ -168,4 +168,8 @@ public class Guardadas extends Fragment {
                 swipeContainer.setRefreshing(false);
             }
         };
+
+
+
+
 }
