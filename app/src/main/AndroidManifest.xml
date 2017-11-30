@@ -138,6 +138,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.elamoreslomasgrande.volley1.Navigation.Navigation" />
         </activity>
+        <activity android:name=".MenuLateral.MenuLateral"></activity>
     </application>
 
 </manifest>

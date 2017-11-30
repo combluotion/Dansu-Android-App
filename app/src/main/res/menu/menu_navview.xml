@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_cuenta"
+            android:title="Cuenta"/>
+        <item
+            android:id="@+id/nav_notificaciones"
+            android:title="Notificaciones" />
+        <item
+            android:id="@+id/nav_preguntanos"
+            android:title="Pregúntanos"  />
+        <item
+            android:id="@+id/nav_centro_de_ayuda"
+            android:title="Centro de ayuda" />
+        <item
+            android:id="@+id/nav_política_de_privacidad"
+            android:title="Política de Privacidad" />
+        <item
+            android:id="@+id/nav_cerrar_sesion"
+            android:title="Cerrar sesión" />
+
+    </group>
+</menu>
