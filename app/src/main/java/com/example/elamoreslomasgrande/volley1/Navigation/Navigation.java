@@ -25,7 +25,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
-import com.example.elamoreslomasgrande.volley1.MenuLateral.MenuLateral;
 import com.example.elamoreslomasgrande.volley1.NavigationChildren.CentroAyuda;
 import com.example.elamoreslomasgrande.volley1.NavigationChildren.CerrarSesion;
 import com.example.elamoreslomasgrande.volley1.NavigationChildren.CuentaCandidato;
