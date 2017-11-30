@@ -7,7 +7,7 @@ import java.lang.annotation.Target;
 import java.util.ArrayList;
 
 
-import io.reactivex.Observable;
+
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
 import okhttp3.ResponseBody;
@@ -61,12 +61,6 @@ public interface PabloAPI {
     // @Headers("Content-Type: application/json")
     @POST("oferta/guardadas")
     Call<ArrayList<Oferta>> getGuardadas(
-            @Field("id") int id
-    );
-    @FormUrlEncoded
-    // @Headers("Content-Type: application/json")
-    @POST("oferta/guardadas")
-    Observable<ArrayList<Oferta>> getGuardadax(
             @Field("id") int id
     );
 

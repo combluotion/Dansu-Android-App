@@ -26,9 +26,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 
-import io.reactivex.Observable;
-import io.reactivex.functions.Consumer;
-import io.reactivex.functions.Function;
+
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -48,7 +46,8 @@ public class OfertasAdapter extends RecyclerView.Adapter<OfertasAdapter.MyViewHo
     public OfertasAdapter(Context mContext, List<Oferta> ofertaList) {
         this.mContext = mContext;
         this.ofertaList = ofertaList;
-        checkguardadas(1);
+        this.guardadas = guardadas;
+
     }
 
     @Override
@@ -64,9 +63,13 @@ public class OfertasAdapter extends RecyclerView.Adapter<OfertasAdapter.MyViewHo
         return ofertaList;
     }
 
+    public List<Oferta> getGuardadas(){
+        return guardadas;
+    }
+
 
     @Override
-    public void onBindViewHolder(final OfertasAdapter.MyViewHolder viewHolder, int i) {
+    public void onBindViewHolder(final OfertasAdapter.MyViewHolder viewHolder, final int i) {
         viewHolder.title.setText(ofertaList.get(i).getTitulo());
         String vote = ofertaList.get(i).getDescripcion();
         String url = ofertaList.get(i).getFotoportada();
@@ -81,34 +84,49 @@ public class OfertasAdapter extends RecyclerView.Adapter<OfertasAdapter.MyViewHo
         viewHolder.guardar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 RetrofitService retrofitService = RetrofitService.getInstance();
                 PabloAPI api = retrofitService.getApiProxyServer();
-                Call<ResponseBody> call = api.postGuardar(1, id_oferta);
-                call.enqueue(new Callback<ResponseBody>() {
-                    @Override
-                    public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
-                        Log.d("traza", "por aqui");
-                        Log.d("traza", response.body().toString());
+                Call<ResponseBody> call;
+
+                if(viewHolder.guardar.isChecked()) {call = api.postGuardar(1, id_oferta);}
+                else {call = api.postDesguardar(1, id_oferta);}
+
+                    call.enqueue(new Callback<ResponseBody>() {
+                        @Override
+                        public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+                            Log.d("traza", "por aqui");
+                            Log.d("traza", response.body().toString());
 
 
-                    }
+                        }
 
-                    @Override
-                    public void onFailure(Call<ResponseBody> call, Throwable t) {
-                        Log.d("traza", "por alla");
-                        Log.d("traza", t.toString());
-                    }
-                });
-            }
+                        @Override
+                        public void onFailure(Call<ResponseBody> call, Throwable t) {
+                            Log.d("traza", "por alla");
+                            Log.d("traza", t.toString());
+                        }
+                    });
+                }
         });
 
-        Iterator it = guardadas.iterator();
-        while (it.hasNext()) {
-            if (ofertaList.get(i).getId() == guardadas.get(i).getId()) {
-                viewHolder.guardar.setChecked(true);
+        // le enviamos el callback al metodo checkguardadas
+        checkguardadas(1,new OnOfertasResponse(){
+
+            @Override
+            public void ofertas(ArrayList<Oferta> ofertas){
+                // este metodo se ejecutara cuando onResponse se ejecute
+                Iterator it = ofertas.iterator();
+                int a = 0;
+                while (it.hasNext()) {
+
+                    if (ofertaList.get(i).getId() == ofertas.get(a).getId()) {
+                        viewHolder.guardar.setChecked(true);
+                    }
+                    it.next();
+                    a++;
+                }
             }
-        }
+        });
 
     }
 
@@ -137,71 +155,32 @@ public class OfertasAdapter extends RecyclerView.Adapter<OfertasAdapter.MyViewHo
         }
 
     }
-
-    public void checkguardadas(int id_usuario) {
-
+    public void checkguardadas(int id_usuario, final OnOfertasResponse callback){
         RetrofitService retrofitService = RetrofitService.getInstance();
         PabloAPI api = retrofitService.getApiProxyServer();
-
-      /* ArrayList<Observable<?>> requests = new ArrayList<>();
-
-       requests.add(api.getGuardadax(1));
-        Observable.zip(
-                requests,
-                new Function<Object[], Object>() {
-                    @Override
-                    public Object apply(Object[] objects) throws Exception {
-                        // Objects[] is an array of combined results of completed requests
-
-                        // do something with those results and emit new event
-                        return new Object();
-                    }
-                })
-                // After all requests had been performed the next observer will receive the Object, returned from Function
-                .subscribe(
-                        // Will be triggered if all requests will end successfully (4xx and 5xx also are successful requests too)
-                        new Consumer<Object>() {
-                            @Override
-                            public void accept(Object o) throws Exception {
-                                //Do something on successful completion of all requests
-                                guardadas =(ArrayList)o;
-                            }
-                        },
-
-                        // Will be triggered if any error during requests will happen
-                        new Consumer<Throwable>() {
-                            @Override
-                            public void accept(Throwable e) throws Exception {
-                                //Do something on error completion of requests
-                            }
-                        }
-                ); */
-
-         Call<ArrayList<Oferta>> call = api.getGuardadas(1);
+        Call<ArrayList<Oferta>> call = api.getGuardadas(1);
         call.enqueue(new Callback<ArrayList<Oferta>>() {
             @Override
             public void onResponse(Call<ArrayList<Oferta>> call, Response<ArrayList<Oferta>> response) {
-
                 Log.d("traza", "por aqui");
                 Log.d("traza", response.body().toString());
                 guardadas = response.body();
 
-
+                // ejecutamos el callback
+                callback.ofertas(response.body());
             }
 
             @Override
             public void onFailure(Call<ArrayList<Oferta>> call, Throwable t) {
-                Log.d("traza", "por alla");
+                Log.d("traza","por alla");
                 Log.d("traza", t.toString());
             }
         });
 
 
+    };
 
 
-
-
-    }
 
 }
 
