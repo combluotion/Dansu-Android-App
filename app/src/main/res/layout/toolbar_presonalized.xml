@@ -1,4 +1,4 @@
-<android.support.v7.widget.Toolbar xmlns:app="http://schemas.android.com/apk/res-auto"
+<android.widget.Toolbar xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/toolbar5"
     android:layout_width="match_parent"
@@ -46,4 +46,4 @@
 
 
 
-</android.support.v7.widget.Toolbar>
+</android.widget.Toolbar>
