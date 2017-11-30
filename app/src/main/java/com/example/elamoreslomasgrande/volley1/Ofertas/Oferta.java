@@ -84,6 +84,10 @@ public class Oferta implements Serializable {
         this.longitud = longitud;
     }
 
+    public Oferta() {
+
+    }
+
     public int getId() {
         return id;
     }

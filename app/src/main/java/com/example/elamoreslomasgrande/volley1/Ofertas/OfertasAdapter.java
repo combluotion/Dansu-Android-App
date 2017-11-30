@@ -1,15 +1,18 @@
 package com.example.elamoreslomasgrande.volley1.Ofertas;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.CountDownTimer;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.elamoreslomasgrande.volley1.Contador;
 import com.example.elamoreslomasgrande.volley1.R;
@@ -55,45 +58,52 @@ public class OfertasAdapter extends RecyclerView.Adapter<OfertasAdapter.MyViewHo
 
 
     @Override
-    public void onBindViewHolder(final OfertasAdapter.MyViewHolder viewHolder, int i){
+    public void onBindViewHolder(final OfertasAdapter.MyViewHolder viewHolder, final int i){
         viewHolder.title.setText(ofertaList.get(i).getTitulo());
         String vote = ofertaList.get(i).getDescripcion();
         String url = ofertaList.get(i).getFotoportada();
         String location = ofertaList.get(i).getDireccion();
         String time = ofertaList.get(i).getFechalimite();
-        Date fecha_oferta = null;
-        Date fecha_actual = null;
-        time = adaptador(time);
+
+
+
+
 
         //FORMATO DE LA FECHA
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
 
-        try {
-            fecha_oferta = formatter.parse(time);
-            fecha_actual = new Date();
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-        long tiempo = fecha_oferta.getTime()-fecha_actual.getTime();
 
-        Contador contador = new Contador(tiempo,1000, viewHolder.fecha,viewHolder.ofertaEstado);
-        contador.start();
+        Contador.countDown(time,1000,viewHolder.fecha,viewHolder.ofertaEstado);
+
 
 
         viewHolder.userrating.setText(vote);
         viewHolder.lugar.setText(location);
 
         Picasso.with(this.mContext).load("http://46.105.28.25:3020/images/"+url).into(viewHolder.castingimg);
+        viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d("click", "You clicked on "+i);
 
+                Toast a = Toast.makeText(viewHolder.userrating.getContext(),""+ofertaList.get(viewHolder.getAdapterPosition()),Toast.LENGTH_SHORT);
+                a.show();
+
+                Intent oferta = new Intent(view.getContext(),detallesOferta.class);
+                Oferta listar_oferta;
+                listar_oferta = ofertaList.get(viewHolder.getAdapterPosition());
+                oferta.putExtra("oferta",listar_oferta);
+                view.getContext().startActivity(oferta);
+
+
+            }
+        });
 
     }
-    public String adaptador(String time){
-        int t = time.indexOf("T");
-        String dias = time.substring(0,t);
-        String horas = " "+ time.substring(t+1,time.length()-5);
+    public void xml(){
 
-        return dias.concat(horas);
     }
+
 
     @Override
     public int getItemCount(){

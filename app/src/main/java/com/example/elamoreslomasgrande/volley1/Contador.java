@@ -4,6 +4,7 @@ import android.os.CountDownTimer;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -46,5 +47,31 @@ public class Contador extends CountDownTimer {
        // tv.setText(String.valueOf("Quedan "+mDays+"d | "+mHours+"h | "+mMin+"m | "+segs+"s"));
         tv.setText(String.valueOf("Quedan "+mDays+"d | "+mHours+"h | "+mMin+"m"));
 
+    }
+    public static void countDown(String time,long time_lapse,TextView tv, Button button){
+        Date fecha_oferta = null;
+        Date fecha_actual = null;
+        time = adaptador(time);
+
+
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+
+        try {
+            fecha_oferta = formatter.parse(time);
+            fecha_actual = new Date();
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        long tiempo = fecha_oferta.getTime()-fecha_actual.getTime();
+
+        Contador contador = new Contador(tiempo,time_lapse, tv,button);
+        contador.start();
+    }
+    private static String adaptador(String time){
+        int t = time.indexOf("T");
+        String dias = time.substring(0,t);
+        String horas = " "+ time.substring(t+1,time.length()-5);
+
+        return dias.concat(horas);
     }
 }

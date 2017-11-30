@@ -9,10 +9,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.elamoreslomasgrande.volley1.Ofertas.Oferta;
 import com.example.elamoreslomasgrande.volley1.Ofertas.OfertasAdapter;
 import com.example.elamoreslomasgrande.volley1.R;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -52,10 +54,16 @@ public class FeedAdapter extends RecyclerView.Adapter<FeedAdapter.MyViewHolder> 
         viewHolder.title.setText(publicacionList.get(i).getDescripcion());
         String vote = publicacionList.get(i).getDescripcion();
         viewHolder.userrating.setText(vote);
+        String url = publicacionList.get(i).getArchivo();
+        Picasso.with(this.mContext).load("http://46.105.28.25:3020/images/"+url).into(viewHolder.imagenPrincipal);
+
         viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Log.d("click", "You clicked on "+i);
+
+                Toast a = Toast.makeText(viewHolder.userrating.getContext(),""+publicacionList.get(viewHolder.getAdapterPosition()),Toast.LENGTH_SHORT);
+                a.show();
 
             }
         });
@@ -71,7 +79,7 @@ public class FeedAdapter extends RecyclerView.Adapter<FeedAdapter.MyViewHolder> 
 
     public class MyViewHolder extends RecyclerView.ViewHolder{
         public TextView title, userrating;
-        public ImageView image;
+        public ImageView image, imagenPrincipal;
 
 
         @SuppressLint("WrongViewCast")
@@ -80,7 +88,7 @@ public class FeedAdapter extends RecyclerView.Adapter<FeedAdapter.MyViewHolder> 
             title = (TextView) view.findViewById(R.id.title);
             image = view.findViewById(R.id.imagen);
             userrating = (TextView) view.findViewById(R.id.userrating);
-
+            imagenPrincipal =  view.findViewById(R.id.imagenPrincipal);
         }
 
     }
