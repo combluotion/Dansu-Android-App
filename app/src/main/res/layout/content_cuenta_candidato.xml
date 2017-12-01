@@ -11,8 +11,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:context="com.example.elamorhallegado.dansu.FragmentCuenta">
+        android:orientation="vertical">
 
         <!-- TODO: Update blank fragment layout -->
         <LinearLayout
@@ -71,6 +70,7 @@
             android:textStyle="normal"
             android:textColor="#000000"
             android:letterSpacing="0.03"
+            android:onClick="cambiarPass"
             android:text="@string/cuentaCambiar"
             android:layout_marginTop="39dp"
             android:layout_marginLeft="20dp" />
@@ -85,8 +85,8 @@
             android:letterSpacing="0.03"
             android:text="@string/cuentaBaja"
             android:layout_marginTop="39dp"
+            android:onClick="goBaja"
             android:layout_marginLeft="20dp" />
-
 
     </LinearLayout>
 </LinearLayout>

@@ -119,7 +119,12 @@
         <activity
             android:name=".NavigationChildren.DarseBaja"
             android:label="@string/title_activity_darse_baja"
-            android:theme="@style/AppTheme" />
+            android:parentActivityName=".NavigationChildren.CuentaCandidato"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.elamoreslomasgrande.volley1.NavigationChildren.CuentaCandidato" />
+        </activity>
         <activity
             android:name=".Navigation.PortfolioChildren.EditarBiografia"
             android:label="@string/title_activity_editar_biografia"
@@ -138,8 +143,16 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.elamoreslomasgrande.volley1.Navigation.Navigation" />
         </activity>
-
-        <activity android:name=".Ofertas.detallesOferta"></activity>
+        <activity android:name=".Ofertas.detallesOferta" />
+        <activity
+            android:name=".NavigationChildren.CambiarPass"
+            android:label="@string/title_activity_cambiar_pass"
+            android:parentActivityName=".NavigationChildren.CuentaCandidato"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.elamoreslomasgrande.volley1.NavigationChildren.CuentaCandidato" />
+        </activity>
     </application>
 
 </manifest>

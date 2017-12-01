@@ -201,5 +201,6 @@
     <string name="Home_Tab1">Castings</string>
     <string name="Home_Tab2">Publicaciones</string>
     <string name="title_activity_portfolio_tabs">PortfolioTabs</string>
+    <string name="title_activity_cambiar_pass">CambiarPass</string>
 
 </resources>
