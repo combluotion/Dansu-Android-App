@@ -82,6 +82,7 @@ public class Castings extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
     }
 
     @Override
@@ -98,9 +99,13 @@ public class Castings extends Fragment {
                 Toast.makeText(getContext(), "¡Baila!", Toast.LENGTH_SHORT).show();
             }
         });
-        loadJSON();
         return Lay;
 
+
+    }
+
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        loadJSON();
     }
 
     // TODO: Rename method, update argument and hook method into UI event

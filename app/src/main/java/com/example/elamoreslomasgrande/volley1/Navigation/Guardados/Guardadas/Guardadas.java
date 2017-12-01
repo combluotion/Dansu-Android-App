@@ -99,8 +99,11 @@ public class Guardadas extends Fragment {
                 Toast.makeText(getContext(), "¡Baila!", Toast.LENGTH_SHORT).show();
             }
         });
-        loadJSON();
         return Lay;}
+
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        loadJSON();
+    }
 
 
     // TODO: Rename method, update argument and hook method into UI event
