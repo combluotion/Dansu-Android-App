@@ -23,6 +23,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.elamoreslomasgrande.volley1.NavigationChildren.CentroAyuda;
@@ -39,6 +40,7 @@ public class Navigation extends  FragmentActivity{
     BottomNavigationView navigation;
     LockableViewPager vp;
     AppCompatActivity aca = new AppCompatActivity();
+    Button a ;
 
 
 
@@ -83,6 +85,7 @@ public class Navigation extends  FragmentActivity{
         vp = (LockableViewPager) findViewById(R.id.vpager);
         vp.setAdapter(homeTabsAdapter);
         vp.setSwipeable(false);
+        a = (Button) findViewById(R.id.imageButtonOptions);
 
         navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setItemIconTintList(null);
@@ -101,6 +104,12 @@ public class Navigation extends  FragmentActivity{
            // aca.getSupportActionBar().setDisplayHomeAsUpEnabled(true); */
 
 
+        a.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                drawerLayout.openDrawer(GravityCompat.START);
+            }
+        });
 
         navView.setNavigationItemSelectedListener(
                 new NavigationView.OnNavigationItemSelectedListener() {

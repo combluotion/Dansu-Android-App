@@ -13,13 +13,14 @@
             android:orientation="horizontal"
             android:gravity="center_vertical"
             android:layout_margin="16dp">
-            <ImageButton
+
+            <Button
                 android:id="@+id/imageButtonOptions"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:background="@null"
-                android:src="@drawable/ic_configuraciones"
-                />
+                android:background="@drawable/ic_configuraciones"/>
+
+
 
 
             <TextView
