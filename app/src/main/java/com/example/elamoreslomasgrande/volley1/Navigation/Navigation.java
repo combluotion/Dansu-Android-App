@@ -1,30 +1,18 @@
 package com.example.elamoreslomasgrande.volley1.Navigation;
 
-import android.app.ActionBar;
 import android.content.Intent;
-import android.graphics.Color;
-import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.ColorInt;
 import android.support.annotation.NonNull;
-import android.support.design.internal.BottomNavigationItemView;
-import android.support.design.internal.BottomNavigationMenuView;
 import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.GravityCompat;
-import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 
-import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.util.Log;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
 import com.example.elamoreslomasgrande.volley1.NavigationChildren.CentroAyuda;
 import com.example.elamoreslomasgrande.volley1.NavigationChildren.CerrarSesion;
@@ -33,14 +21,12 @@ import com.example.elamoreslomasgrande.volley1.NavigationChildren.Notificaciones
 import com.example.elamoreslomasgrande.volley1.NavigationChildren.PoliticaPrivacidad;
 import com.example.elamoreslomasgrande.volley1.R;
 
-import java.lang.reflect.Field;
-
 public class Navigation extends  FragmentActivity{
     HomeViewPagerAdapter homeTabsAdapter = new HomeViewPagerAdapter(getSupportFragmentManager());
     BottomNavigationView navigation;
     LockableViewPager vp;
     AppCompatActivity aca = new AppCompatActivity();
-    Button a ;
+    Button navButttonOption, navButtonOption;
 
 
 
@@ -82,12 +68,13 @@ public class Navigation extends  FragmentActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation);
 
-        vp = (LockableViewPager) findViewById(R.id.vpager);
+        vp =  findViewById(R.id.vpager);
         vp.setAdapter(homeTabsAdapter);
         vp.setSwipeable(false);
-        a = (Button) findViewById(R.id.imageButtonOptions);
+        navButttonOption =  findViewById(R.id.imageButtonOptions);
+        navButtonOption =  findViewById(R.id.imageButtonSearch);
 
-        navigation = (BottomNavigationView) findViewById(R.id.navigation);
+        navigation =  findViewById(R.id.navigation);
         navigation.setItemIconTintList(null);
 
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
@@ -104,10 +91,23 @@ public class Navigation extends  FragmentActivity{
            // aca.getSupportActionBar().setDisplayHomeAsUpEnabled(true); */
 
 
-        a.setOnClickListener(new View.OnClickListener() {
+
+
+        //LISTENERS DE BARRA DE NAV
+
+
+        navButttonOption.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 drawerLayout.openDrawer(GravityCompat.START);
+            }
+        });
+
+
+        navButtonOption.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
             }
         });
 

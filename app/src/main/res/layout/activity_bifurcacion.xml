@@ -6,6 +6,7 @@
     android:orientation="vertical"
     android:gravity="center"
     android:paddingHorizontal="46dp"
+    android:background="#3498db"
     tools:context="com.example.elamoreslomasgrande.volley1.Login.Bifurcacion">
 
     <ImageView

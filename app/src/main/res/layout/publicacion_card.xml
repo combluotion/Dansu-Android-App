@@ -85,9 +85,10 @@
 
 
                     <CheckBox
-                        android:layout_width="18dp"
-                        android:button="@drawable/loveimage"
-                        android:layout_height="16dp" />
+                        android:layout_width="wrap_content"
+                        android:button="@drawable/ic_valorar"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content" />
                 </LinearLayout>
 
 

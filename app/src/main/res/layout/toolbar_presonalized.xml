@@ -36,13 +36,13 @@
                 android:textAlignment="center"
                 />
 
-            <ImageButton
+
+            <Button
                 android:id="@+id/imageButtonSearch"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:background="@null"
-                android:src="@drawable/ic_buscador"
-                />
+                android:background="@drawable/ic_buscador"/>
+
         </LinearLayout>
 
 
