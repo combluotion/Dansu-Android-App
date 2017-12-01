@@ -64,11 +64,10 @@
 
                 <ImageView
                     android:id="@+id/imageView"
-                    android:layout_width="9dp"
-                    android:layout_height="12dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:backgroundTint="@color/backgroundToolBar"
-                    android:background="@color/backgroundToolBar"/>
+                    android:background="@drawable/ic_ubicacion_azul"/>
 
                 <TextView
                     android:layout_marginLeft="7dp"
@@ -124,7 +123,8 @@
                     android:text="TextView"
                     />
 
-                <CheckBox android:layout_width="wrap_content"
+                <CheckBox
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:button="@drawable/selector_guardar"
                     android:layout_gravity="center_vertical"

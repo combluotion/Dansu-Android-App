@@ -40,8 +40,8 @@
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:background="@null"
-                android:src="@drawable/ic_buscador"
-                />
+                android:elevation="0dp"
+                android:src="@drawable/ic_buscador" />
         </LinearLayout>
 
 
