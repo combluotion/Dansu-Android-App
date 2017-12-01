@@ -1,5 +1,7 @@
 package com.example.elamoreslomasgrande.volley1.Ofertas;
 
+import android.widget.CheckBox;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
@@ -62,6 +64,9 @@ public class Oferta implements Serializable {
     @SerializedName("longitud")
     @Expose
     String longitud;
+  /*  @SerializedName("checkbox")
+    @Expose
+    CheckBox guardado; */
 
 
     public Oferta(int id, int activa, String fotoportada, String titulo, String empresa, String descripcion, String tags, String jornada, String renumerado, String salario, String horario, String fecha, String fechalimite, String id_estilo, String direccion, String latitud, String longitud) {
@@ -82,6 +87,7 @@ public class Oferta implements Serializable {
         this.direccion = direccion;
         this.latitud = latitud;
         this.longitud = longitud;
+      //  this.guardado = guardado;
     }
 
     public Oferta() {
@@ -224,6 +230,12 @@ public class Oferta implements Serializable {
         this.longitud = longitud;
     }
 
+  //  public CheckBox getGuardado() {
+  //      return guardado;
+ //   }
+
+   // public void setGuardado(CheckBox guardado) {this.guardado = guardado;}
+
     @Override
     public String toString() {
         return "Oferta{" +
@@ -244,6 +256,7 @@ public class Oferta implements Serializable {
                 ", direccion='" + direccion + '\'' +
                 ", latitud='" + latitud + '\'' +
                 ", longitud='" + longitud + '\'' +
+              //  ", guardado='" + guardado + '\'' +
                 '}';
     }
 }

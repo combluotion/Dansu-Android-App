@@ -48,6 +48,7 @@ public class Inscritas extends Fragment {
     private RecyclerView recyclerView;
     private OfertasAdapter adapter;
     private List<Oferta> ofertas;
+    private List<Oferta> guardadas;
     private SwipeRefreshLayout swipeContainer;
     public static final String LOG_TAG = OfertasAdapter.class.getName();
 
@@ -91,7 +92,6 @@ public class Inscritas extends Fragment {
         FrameLayout Lay =(FrameLayout) inflater.inflate(R.layout.fragment_inscritas, container, false);
         swipeContainer = (SwipeRefreshLayout) Lay.findViewById(R.id.main_content);
         swipeContainer.setColorSchemeResources(android.R.color.holo_orange_dark);
-        loadJSON();
         swipeContainer.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener(){
             @Override
             public void onRefresh(){
@@ -99,6 +99,7 @@ public class Inscritas extends Fragment {
                 Toast.makeText(getContext(), "¡Baila!", Toast.LENGTH_SHORT).show();
             }
         });
+        loadJSON();
         return Lay;}
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -162,10 +163,12 @@ public class Inscritas extends Fragment {
                 Log.d("traza","por alla");
                 Log.d("traza", t.toString());
             }
+
         });
         if (swipeContainer.isRefreshing()){
             swipeContainer.setRefreshing(false);
         }
-    };
 
+
+}
 }
