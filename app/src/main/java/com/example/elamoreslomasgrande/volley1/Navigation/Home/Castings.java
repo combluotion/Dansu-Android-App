@@ -43,6 +43,7 @@ public class Castings extends Fragment {
     private RecyclerView recyclerView;
     private OfertasAdapter adapter;
     private List<Oferta> ofertas;
+    private List<Oferta> guardadas;
     private SwipeRefreshLayout swipeContainer;
     public static final String LOG_TAG = OfertasAdapter.class.getName();
 
@@ -81,6 +82,7 @@ public class Castings extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
     }
 
     @Override
@@ -90,7 +92,6 @@ public class Castings extends Fragment {
          FrameLayout Lay =(FrameLayout) inflater.inflate(R.layout.fragment_castings, container, false);
         swipeContainer = (SwipeRefreshLayout) Lay.findViewById(R.id.main_content);
         swipeContainer.setColorSchemeResources(android.R.color.holo_orange_dark);
-        loadJSON();
         swipeContainer.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener(){
             @Override
             public void onRefresh(){
@@ -99,6 +100,12 @@ public class Castings extends Fragment {
             }
         });
         return Lay;
+
+
+    }
+
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        loadJSON();
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -142,7 +149,7 @@ public class Castings extends Fragment {
 
     private void loadJSON(){
         RetrofitService retrofitService = RetrofitService.getInstance();
-        PabloAPI api = retrofitService.getApiProxyServer();
+       final PabloAPI api = retrofitService.getApiProxyServer();
         Call<ArrayList<Oferta>> call = api.getOfertas();
         call.enqueue(new Callback<ArrayList<Oferta>>() {
             @Override
@@ -163,6 +170,7 @@ public class Castings extends Fragment {
                 Log.d("traza", t.toString());
             }
         });
+
         if (swipeContainer.isRefreshing()){
             swipeContainer.setRefreshing(false);
         }

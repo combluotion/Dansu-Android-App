@@ -47,7 +47,8 @@ public class Guardadas extends Fragment {
 
     private RecyclerView recyclerView;
     private OfertasAdapter adapter;
-    private List<Oferta> ofertas;
+    List<Oferta> ofertas;
+    List<Oferta> guardadas;
     private SwipeRefreshLayout swipeContainer;
     public static final String LOG_TAG = OfertasAdapter.class.getName();
 
@@ -91,7 +92,6 @@ public class Guardadas extends Fragment {
         FrameLayout Lay =(FrameLayout) inflater.inflate(R.layout.fragment_guardadas, container, false);
         swipeContainer = (SwipeRefreshLayout) Lay.findViewById(R.id.main_content);
         swipeContainer.setColorSchemeResources(android.R.color.holo_orange_dark);
-        loadJSON();
         swipeContainer.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener(){
             @Override
             public void onRefresh(){
@@ -100,6 +100,10 @@ public class Guardadas extends Fragment {
             }
         });
         return Lay;}
+
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        loadJSON();
+    }
 
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -141,7 +145,7 @@ public class Guardadas extends Fragment {
         void onFragmentInteraction(Uri uri);
     }
 
-        private void loadJSON(){
+        public void loadJSON(){
             RetrofitService retrofitService = RetrofitService.getInstance();
             PabloAPI api = retrofitService.getApiProxyServer();
             Call<ArrayList<Oferta>> call = api.getGuardadas(1);
@@ -156,6 +160,7 @@ public class Guardadas extends Fragment {
                     recyclerView.setAdapter(new OfertasAdapter(getActivity().getApplicationContext(), ofertas));
                     recyclerView.smoothScrollToPosition(0);
 
+
                 }
 
                 @Override
@@ -164,8 +169,13 @@ public class Guardadas extends Fragment {
                     Log.d("traza", t.toString());
                 }
             });
+
             if (swipeContainer.isRefreshing()){
                 swipeContainer.setRefreshing(false);
             }
         };
+
+
+
+
 }
