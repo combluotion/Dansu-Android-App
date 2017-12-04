@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:paddingVertical="16dp">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -13,12 +12,14 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical"
+            android:paddingVertical="16dp" >
 
             <ImageView
+                android:id="@+id/foto"
                 android:layout_width="match_parent"
                 android:layout_height="102dp"
-                android:background="#d8d8d8" />
+                android:src=""/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -217,7 +218,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="203dp"
                 android:background="#d8d8d8"/>
+
             <Button
+                android:id="@+id/Inscribirse"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"

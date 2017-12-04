@@ -143,7 +143,11 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.elamoreslomasgrande.volley1.Navigation.Navigation" />
         </activity>
-        <activity android:name=".Ofertas.detallesOferta" />
+        <activity android:name=".Ofertas.detallesOferta"
+            android:label="Oferta"
+            android:theme="@style/AppTheme">
+
+        </activity>
         <activity
             android:name=".NavigationChildren.CambiarPass"
             android:label="@string/cambiarPassTitulo"
