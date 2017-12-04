@@ -111,6 +111,22 @@ public class OfertasAdapter extends RecyclerView.Adapter<OfertasAdapter.MyViewHo
         viewHolder.lugar.setText(location);
 
         Picasso.with(this.mContext).load("http://46.105.28.25:3020/images/"+url).into(viewHolder.castingimg);
+
+        viewHolder.ofertaEstado.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d("click", "You clicked on "+i);
+
+                Toast a = Toast.makeText(viewHolder.userrating.getContext(),""+ofertaList.get(viewHolder.getAdapterPosition()),Toast.LENGTH_SHORT);
+                a.show();
+
+                Intent oferta = new Intent(view.getContext(),detallesOferta.class);
+                Oferta listar_oferta;
+                listar_oferta = ofertaList.get(viewHolder.getAdapterPosition());
+                oferta.putExtra("oferta",listar_oferta);
+                view.getContext().startActivity(oferta);
+            }
+        });
         viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
