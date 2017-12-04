@@ -55,7 +55,7 @@
         <activity android:name=".Login.Bifurcacion" />
         <activity
             android:name=".NavigationChildren.BuscarCasting"
-            android:label="@string/title_activity_buscar_casting"
+            android:label="@string/buscarCastingTitulo"
             android:parentActivityName=".Navigation.Navigation"
             android:theme="@style/AppTheme">
             <meta-data
@@ -64,7 +64,7 @@
         </activity>
         <activity
             android:name=".NavigationChildren.CuentaEmpresa"
-            android:label="@string/title_activity_cuenta_empresa"
+            android:label="@string/cuentaTitulo"
             android:parentActivityName=".Navigation.Navigation"
             android:theme="@style/AppTheme">
             <meta-data
@@ -73,7 +73,7 @@
         </activity>
         <activity
             android:name=".NavigationChildren.CuentaCandidato"
-            android:label="@string/title_activity_cuenta_candidato"
+            android:label="@string/cuentaTitulo"
             android:parentActivityName=".Navigation.Navigation"
             android:theme="@style/AppTheme">
             <meta-data
@@ -82,7 +82,7 @@
         </activity>
         <activity
             android:name=".NavigationChildren.NotificacionesConf"
-            android:label="@string/title_activity_notificaciones_conf"
+            android:label="@string/notificacionesTitulo"
             android:parentActivityName=".Navigation.Navigation"
             android:theme="@style/AppTheme">
             <meta-data
@@ -91,7 +91,7 @@
         </activity>
         <activity
             android:name=".NavigationChildren.PoliticaPrivacidad"
-            android:label="@string/title_activity_politica_privacidad"
+            android:label="@string/privacidadTitulo"
             android:parentActivityName=".Navigation.Navigation"
             android:theme="@style/AppTheme">
             <meta-data
@@ -100,7 +100,7 @@
         </activity>
         <activity
             android:name=".NavigationChildren.CentroAyuda"
-            android:label="@string/title_activity_centro_ayuda"
+            android:label="@string/centroAyudaTitulo"
             android:parentActivityName=".Navigation.Navigation"
             android:theme="@style/AppTheme">
             <meta-data
@@ -109,7 +109,7 @@
         </activity>
         <activity
             android:name=".NavigationChildren.CerrarSesion"
-            android:label="@string/title_activity_cerrar_sesion"
+            android:label="@string/cerrarSesionTitulo"
             android:parentActivityName=".Navigation.Navigation"
             android:theme="@style/AppTheme">
             <meta-data
@@ -118,7 +118,7 @@
         </activity>
         <activity
             android:name=".NavigationChildren.DarseBaja"
-            android:label="@string/title_activity_darse_baja"
+            android:label="@string/bajaTitulo"
             android:parentActivityName=".NavigationChildren.CuentaCandidato"
             android:theme="@style/AppTheme">
             <meta-data
@@ -127,7 +127,7 @@
         </activity>
         <activity
             android:name=".Navigation.PortfolioChildren.EditarBiografia"
-            android:label="@string/title_activity_editar_biografia"
+            android:label="@string/editarBiografíaTitulo"
             android:parentActivityName=".Navigation.Navigation"
             android:theme="@style/AppTheme">
             <meta-data
@@ -136,7 +136,7 @@
         </activity>
         <activity
             android:name=".Navigation.PortfolioChildren.EditarEducacion"
-            android:label="@string/title_activity_editar_educacion"
+            android:label="@string/editarEducacionTitulo"
             android:parentActivityName=".Navigation.Navigation"
             android:theme="@style/AppTheme">
             <meta-data
@@ -146,7 +146,7 @@
         <activity android:name=".Ofertas.detallesOferta" />
         <activity
             android:name=".NavigationChildren.CambiarPass"
-            android:label="@string/title_activity_cambiar_pass"
+            android:label="@string/cambiarPassTitulo"
             android:parentActivityName=".NavigationChildren.CuentaCandidato"
             android:theme="@style/AppTheme">
             <meta-data
