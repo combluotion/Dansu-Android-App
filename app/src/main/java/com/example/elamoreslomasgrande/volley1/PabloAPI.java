@@ -57,6 +57,22 @@ public interface PabloAPI {
     ); */
 
 
+   @Headers("Content-Type: application/json")
+    @POST("oferta/checkmisofertas")
+    Call<ResponseBody> checkOferta(
+            @Field("id_usuario") int id_usuario,
+            @Field("id_oferta") int id_oferta
+    );
+
+
+     @FormUrlEncoded
+     // @Headers("Content-Type: application/json")
+     @POST("oferta/altaoferta")
+     Call<ResponseBody> altaOferta(
+             @Field("id_usuario") int id_usuario,
+             @Field("id_oferta") int id_oferta
+     );
+
     @FormUrlEncoded
     // @Headers("Content-Type: application/json")
     @POST("oferta/guardadas")
