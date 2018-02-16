@@ -7,4 +7,6 @@ People involved: <br>
 [Anastasia Senchukova](https://www.linkedin.com/in/anastasiasenchukova/) - UX UI Designer and Branding <br>
 [Adriana Elias](https://www.linkedin.com/in/adriana-el%C3%ADas-vigabriel-99a668143/) - UX UI Designer and Marketing <br>
 [Paola Acosta](https://www.linkedin.com/in/paola-acosta-190300137/) - UX UI Designer and Marketing <br>
-[Diego Romero](https://www.linkedin.com/in/diego-romero-sanchez-6b0737143/) - BackEnd Node.js Developer <br>
+[Diego Romero](https://www.linkedin.com/in/diego-romero-sanchez-6b0737143/) - BackEnd Node.js and Java Developer <br>
+[Ismael Martínez](https://www.linkedin.com/in/ismaelcm8/) - Java Developer <br>
+[Aitor Manzanares](https://www.linkedin.com/in/aitor-manzanares-carballes-477bb0145/) - Java Developer <br>
